@@ -1,0 +1,60 @@
+content = """BM Suite - Full Setup Guide
+
+1. PREREQUISITES
+- Install Node.js (v18+)
+- Install PostgreSQL
+- Install Git
+
+2. CLONE PROJECT
+git clone <your-repo-url>
+cd BMSuite
+
+3. INSTALL DEPENDENCIES
+npm install
+
+4. SETUP ENVIRONMENT VARIABLES
+Create a .env file with:
+
+DATABASE_URL="postgresql://postgres:password@localhost:5432/BMSuite"
+GOOGLE_CLIENT_ID=""
+GOOGLE_CLIENT_SECRET=""
+GOOGLE_LOGIN_DOMAIN="http://localhost:5173"
+
+5. SETUP DATABASE
+Create DB manually:
+CREATE DATABASE "BMSuite";
+
+Run migrations:
+npx prisma migrate dev
+npx prisma generate
+
+6. CREATE INITIAL USER
+node
+const bcrypt = require('bcrypt');
+bcrypt.hashSync('admin123', 10);
+
+Then:
+npx prisma studio
+
+Add user:
+email: admin@test.com
+password: <hashed password>
+name: admin
+
+7. START SERVER
+npm run dev
+
+8. ACCESS APP
+http://localhost:5173/login
+
+9. LOGIN
+Email: admin@test.com
+Password: admin123
+
+10. OPTIONAL RESET
+rm -rf node_modules
+rm -rf .svelte-kit
+npm install
+npx prisma migrate reset
+npm run dev
+"""
