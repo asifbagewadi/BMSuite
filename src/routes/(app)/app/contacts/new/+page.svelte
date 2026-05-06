@@ -66,7 +66,7 @@
 </script>
 
 <svelte:head>
-    <title>New Contact - BottleCRM</title>
+    <title>New Contact - BMSuite</title>
 </svelte:head>
 
 <div class="min-h-screen bg-gray-50 dark:bg-gray-900">

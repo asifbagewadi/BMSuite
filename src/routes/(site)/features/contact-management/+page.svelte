@@ -66,22 +66,22 @@
 </script>
 
 <svelte:head>
-  <title>Free Contact Management Software | Unlimited CRM - BottleCRM</title>
-  <meta name="description" content="Manage unlimited contacts for free with BottleCRM. Advanced search, custom fields, mobile access. No per-contact fees. 100% data ownership." />
-  <meta name="keywords" content="free crm, contact management, unlimited contacts, open source crm, customer database, contact manager, crm software, bottlecrm" />
+  <title>Free Contact Management Software | Unlimited CRM - BMSuite</title>
+  <meta name="description" content="Manage unlimited contacts for free with BMSuite. Advanced search, custom fields, mobile access. No per-contact fees. 100% data ownership." />
+  <meta name="keywords" content="free crm, contact management, unlimited contacts, open source crm, customer database, contact manager, crm software, BMSuite" />
   <link rel="canonical" href="https://bottlecrm.io/features/contact-management" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Free Contact Management Software | Unlimited CRM - BottleCRM" />
-  <meta property="og:description" content="Manage unlimited contacts for free with BottleCRM. Advanced search, custom fields, mobile access. No per-contact fees. 100% data ownership." />
+  <meta property="og:title" content="Free Contact Management Software | Unlimited CRM - BMSuite" />
+  <meta property="og:description" content="Manage unlimited contacts for free with BMSuite. Advanced search, custom fields, mobile access. No per-contact fees. 100% data ownership." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bottlecrm.io/features/contact-management" />
   <meta property="og:image" content="https://bottlecrm.io/og-image-contact-management.png" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Free Contact Management Software | Unlimited CRM - BottleCRM" />
-  <meta name="twitter:description" content="Manage unlimited contacts for free with BottleCRM. Advanced search, custom fields, mobile access. No per-contact fees. 100% data ownership." />
+  <meta name="twitter:title" content="Free Contact Management Software | Unlimited CRM - BMSuite" />
+  <meta name="twitter:description" content="Manage unlimited contacts for free with BMSuite. Advanced search, custom fields, mobile access. No per-contact fees. 100% data ownership." />
   <meta name="twitter:image" content="https://bottlecrm.io/og-image-contact-management.png" />
 
   <!-- Structured Data (JSON-LD) -->
@@ -90,7 +90,7 @@
       {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
-        "name": "BottleCRM",
+        "name": "BMSuite",
         "url": "https://bottlecrm.io/features/contact-management",
         "image": "https://bottlecrm.io/og-image-contact-management.png",
         "description": "Free contact management software with unlimited contacts, advanced search, custom fields, and mobile access. No per-contact fees.",
@@ -103,7 +103,7 @@
         },
         "publisher": {
           "@type": "Organization",
-          "name": "BottleCRM"
+          "name": "BMSuite"
         }
       }
     </script>
@@ -125,7 +125,7 @@
         </h1>
         
         <p class="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed">
-          Stop paying $2-10 per contact. BottleCRM gives you unlimited contact storage, advanced search, custom fields, and mobile access - all completely free. Build stronger customer relationships without breaking the bank.
+          Stop paying $2-10 per contact. BMSuite gives you unlimited contact storage, advanced search, custom fields, and mobile access - all completely free. Build stronger customer relationships without breaking the bank.
         </p>
         
         <ul class="mb-8 space-y-3 text-lg">
@@ -179,7 +179,7 @@
               </div>
               <div class="border-t border-white/30 pt-4">
                 <div class="flex justify-between items-center">
-                  <span class="font-bold text-lg">Unlimited contacts in BottleCRM:</span>
+                  <span class="font-bold text-lg">Unlimited contacts in BMSuite:</span>
                   <span class="text-3xl font-bold text-green-300">$0</span>
                 </div>
               </div>
@@ -468,7 +468,7 @@
         See Contact Management in Action
       </h2>
       <p class="text-xl text-gray-600">
-        Experience the intuitive interface and powerful features of BottleCRM's contact management system.
+        Experience the intuitive interface and powerful features of BMSuite's contact management system.
       </p>
     </div>
 
@@ -644,7 +644,7 @@
       </div>
       
       <div class="mt-8 text-center">
-        <p class="text-gray-600 mb-4">This is just a preview. The actual BottleCRM interface includes advanced filtering, bulk operations, custom fields, and much more.</p>
+        <p class="text-gray-600 mb-4">This is just a preview. The actual BMSuite interface includes advanced filtering, bulk operations, custom fields, and much more.</p>
         <a href="/login" class="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 font-semibold">
           <Zap class="w-5 h-5 mr-2" />
           Try the Full Interface
@@ -662,7 +662,7 @@
         🚀 Coming Soon Features
       </h2>
       <p class="text-xl text-gray-600">
-        We're continuously improving BottleCRM with new contact management features based on user feedback.
+        We're continuously improving BMSuite with new contact management features based on user feedback.
       </p>
     </div>
 
@@ -703,7 +703,7 @@
 
     <div class="mt-12 text-center bg-white rounded-2xl p-8 shadow-lg">
       <h3 class="text-2xl font-bold text-gray-900 mb-4">Want to influence our roadmap?</h3>
-      <p class="text-gray-600 mb-6">Join our community and help us prioritize which features to build next. Your feedback shapes BottleCRM's future!</p>
+      <p class="text-gray-600 mb-6">Join our community and help us prioritize which features to build next. Your feedback shapes BMSuite's future!</p>
       <div class="flex flex-col sm:flex-row sm:justify-center space-y-4 sm:space-y-0 sm:space-x-4">
         <a href="https://github.com/MicroPyramid/opensource-startup-crm/discussions" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 font-semibold">
           <MessageCircle class="w-5 h-5 mr-2" />
@@ -880,7 +880,7 @@
         Contact Management Feature Comparison
       </h2>
       <p class="text-xl text-gray-600">
-        See how BottleCRM's contact management compares to typical CRM pricing models.
+        See how BMSuite's contact management compares to typical CRM pricing models.
       </p>
     </div>
 
@@ -902,7 +902,7 @@
           <tr class="border-b border-gray-200 bg-green-50 border-l-4 border-l-green-500">
             <td class="px-6 py-4 font-semibold text-green-700">
               <div class="flex items-center">
-                BottleCRM
+                BMSuite
                 <span class="ml-2 px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Free & Open Source</span>
               </div>
             </td>
@@ -1008,7 +1008,7 @@
         Contact Management FAQ
       </h2>
       <p class="text-xl text-gray-600">
-        Common questions about BottleCRM's contact management features.
+        Common questions about BMSuite's contact management features.
       </p>
     </div>
 
@@ -1020,14 +1020,14 @@
           aria-expanded={activeFaq === 0}
         >
           <div class="flex justify-between items-center">
-            <h3 class="text-lg font-semibold text-gray-900 pr-4">How many contacts can I store in BottleCRM?</h3>
+            <h3 class="text-lg font-semibold text-gray-900 pr-4">How many contacts can I store in BMSuite?</h3>
             <ChevronDown class="w-5 h-5 text-gray-500 transform transition-transform duration-200 {activeFaq === 0 ? 'rotate-180' : ''}" />
           </div>
         </button>
         
         {#if activeFaq === 0}
           <div transition:fade="{{ duration: 200 }}" class="px-6 pb-5">
-            <p class="text-gray-700 leading-relaxed">Unlimited! Unlike other CRM systems that charge per contact or have storage limits, BottleCRM allows you to store as many contacts as you need without any additional costs.</p>
+            <p class="text-gray-700 leading-relaxed">Unlimited! Unlike other CRM systems that charge per contact or have storage limits, BMSuite allows you to store as many contacts as you need without any additional costs.</p>
           </div>
         {/if}
       </div>
@@ -1046,7 +1046,7 @@
         
         {#if activeFaq === 1}
           <div transition:fade="{{ duration: 200 }}" class="px-6 pb-5">
-            <p class="text-gray-700 leading-relaxed">Yes, BottleCRM supports importing contacts from CSV files, Excel spreadsheets, and most popular CRM systems. Our import wizard helps you map fields and ensures data integrity during the migration process.</p>
+            <p class="text-gray-700 leading-relaxed">Yes, BMSuite supports importing contacts from CSV files, Excel spreadsheets, and most popular CRM systems. Our import wizard helps you map fields and ensures data integrity during the migration process.</p>
           </div>
         {/if}
       </div>
@@ -1065,7 +1065,7 @@
         
         {#if activeFaq === 2}
           <div transition:fade="{{ duration: 200 }}" class="px-6 pb-5">
-            <p class="text-gray-700 leading-relaxed">Absolutely. Since BottleCRM is self-hosted, your contact data never leaves your servers. You have complete control over data security, privacy, and compliance with regulations like GDPR.</p>
+            <p class="text-gray-700 leading-relaxed">Absolutely. Since BMSuite is self-hosted, your contact data never leaves your servers. You have complete control over data security, privacy, and compliance with regulations like GDPR.</p>
           </div>
         {/if}
       </div>
@@ -1084,7 +1084,7 @@
         
         {#if activeFaq === 3}
           <div transition:fade="{{ duration: 200 }}" class="px-6 pb-5">
-            <p class="text-gray-700 leading-relaxed">Yes, BottleCRM allows unlimited custom fields. Add industry-specific information, custom tags, dropdown selections, and any other data points relevant to your business without restrictions.</p>
+            <p class="text-gray-700 leading-relaxed">Yes, BMSuite allows unlimited custom fields. Add industry-specific information, custom tags, dropdown selections, and any other data points relevant to your business without restrictions.</p>
           </div>
         {/if}
       </div>
@@ -1096,14 +1096,14 @@
           aria-expanded={activeFaq === 4}
         >
           <div class="flex justify-between items-center">
-            <h3 class="text-lg font-semibold text-gray-900 pr-4">Does BottleCRM work on mobile devices?</h3>
+            <h3 class="text-lg font-semibold text-gray-900 pr-4">Does BMSuite work on mobile devices?</h3>
             <ChevronDown class="w-5 h-5 text-gray-500 transform transition-transform duration-200 {activeFaq === 4 ? 'rotate-180' : ''}" />
           </div>
         </button>
         
         {#if activeFaq === 4}
           <div transition:fade="{{ duration: 200 }}" class="px-6 pb-5">
-            <p class="text-gray-700 leading-relaxed">BottleCRM is fully responsive and works perfectly on smartphones and tablets. You can access, search, and manage contacts on any device with a modern web browser.</p>
+            <p class="text-gray-700 leading-relaxed">BMSuite is fully responsive and works perfectly on smartphones and tablets. You can access, search, and manage contacts on any device with a modern web browser.</p>
           </div>
         {/if}
       </div>
@@ -1115,14 +1115,14 @@
           aria-expanded={activeFaq === 5}
         >
           <div class="flex justify-between items-center">
-            <h3 class="text-lg font-semibold text-gray-900 pr-4">How does contact management in BottleCRM compare to paid alternatives?</h3>
+            <h3 class="text-lg font-semibold text-gray-900 pr-4">How does contact management in BMSuite compare to paid alternatives?</h3>
             <ChevronDown class="w-5 h-5 text-gray-500 transform transition-transform duration-200 {activeFaq === 5 ? 'rotate-180' : ''}" />
           </div>
         </button>
         
         {#if activeFaq === 5}
           <div transition:fade="{{ duration: 200 }}" class="px-6 pb-5">
-            <p class="text-gray-700 leading-relaxed">BottleCRM provides enterprise-grade contact management features for free, including unlimited contacts, custom fields, advanced search, and data export. Most commercial CRM systems charge $25-100+ per user per month for similar functionality, often with contact limits and feature restrictions.</p>
+            <p class="text-gray-700 leading-relaxed">BMSuite provides enterprise-grade contact management features for free, including unlimited contacts, custom fields, advanced search, and data export. Most commercial CRM systems charge $25-100+ per user per month for similar functionality, often with contact limits and feature restrictions.</p>
           </div>
         {/if}
       </div>
@@ -1137,7 +1137,7 @@
       Ready to Manage Unlimited Contacts for Free?
     </h2>
     <p class="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-      Stop paying per contact or hitting storage limits. Start building better customer relationships with BottleCRM's powerful, free contact management system.
+      Stop paying per contact or hitting storage limits. Start building better customer relationships with BMSuite's powerful, free contact management system.
     </p>
     
     <div class="flex flex-col sm:flex-row sm:justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8">

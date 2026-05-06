@@ -34,13 +34,13 @@
 </script>
 
 <svelte:head>
-  <title>BottleCRM Features: Free & Open Source CRM Software</title>
-  <meta name="description" content="Explore BottleCRM's powerful features: contact management, sales pipeline, task automation, analytics & more. A free, open-source CRM for growing businesses." />
-  <meta name="keywords" content="bottlecrm features, free crm features, open source crm, crm software features, contact management, sales pipeline, task automation, crm analytics, business management software" />
+  <title>BMSuite Features: Free & Open Source CRM Software</title>
+  <meta name="description" content="Explore BMSuite's powerful features: contact management, sales pipeline, task automation, analytics & more. A free, open-source CRM for growing businesses." />
+  <meta name="keywords" content="BMSuite features, free crm features, open source crm, crm software features, contact management, sales pipeline, task automation, crm analytics, business management software" />
   
   <!-- Open Graph -->
-  <meta property="og:title" content="BottleCRM Features: Free & Open Source CRM Software" />
-  <meta property="og:description" content="Discover BottleCRM's comprehensive features: contact management, sales automation, analytics & more. Enterprise-grade, free, and open-source." />
+  <meta property="og:title" content="BMSuite Features: Free & Open Source CRM Software" />
+  <meta property="og:description" content="Discover BMSuite's comprehensive features: contact management, sales automation, analytics & more. Enterprise-grade, free, and open-source." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bottlecrm.io/features" />
   <meta property="og:image" content="https://bottlecrm.io/logo_social.png" />
@@ -49,17 +49,17 @@
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "BottleCRM Features",
-      "description": "Explore BottleCRM's powerful features: contact management, sales pipeline, task automation, analytics & more. A free, open-source CRM for growing businesses.",
+      "name": "BMSuite Features",
+      "description": "Explore BMSuite's powerful features: contact management, sales pipeline, task automation, analytics & more. A free, open-source CRM for growing businesses.",
       "url": "https://bottlecrm.io/features",
       "isPartOf": {
         "@type": "WebSite",
-        "name": "BottleCRM",
+        "name": "BMSuite",
         "url": "https://bottlecrm.io"
       },
       "mainEntity": {
         "@type": "SoftwareApplication",
-        "name": "BottleCRM",
+        "name": "BMSuite",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Web (Cross-platform)",
         "offers": {
@@ -67,7 +67,7 @@
           "price": "0",
           "priceCurrency": "USD"
         },
-        "description": "BottleCRM is a free and open-source Customer Relationship Management (CRM) software offering enterprise-grade features like contact management, sales pipeline, task automation, analytics, and invoicing.",
+        "description": "BMSuite is a free and open-source Customer Relationship Management (CRM) software offering enterprise-grade features like contact management, sales pipeline, task automation, analytics, and invoicing.",
         "url": "https://bottlecrm.io",
         "softwareVersion": "1.0", // Update as versions change
         "keywords": "crm, free crm, open source crm, contact management, sales pipeline, business software",
@@ -90,14 +90,14 @@
         ],
         "provider": {
           "@type": "Organization",
-          "name": "BottleCRM",
+          "name": "BMSuite",
           "url": "https://bottlecrm.io",
           "logo": "https://bottlecrm.io/logo.png" // Add a relevant logo URL
         }
       },
       "publisher": {
         "@type": "Organization",
-        "name": "BottleCRM",
+        "name": "BMSuite",
         "url": "https://bottlecrm.io",
         "logo": {
           "@type": "ImageObject",
@@ -149,7 +149,7 @@
         Professional CRM Feature Set
       </h2>
       <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-        BottleCRM provides enterprise-grade functionality typically found in premium CRM solutions. All features are included in our free, open-source platform with no hidden costs or limitations.
+        BMSuite provides enterprise-grade functionality typically found in premium CRM solutions. All features are included in our free, open-source platform with no hidden costs or limitations.
       </p>
     </div>
 
@@ -829,7 +829,7 @@
           </div>
           
           <h4 class="text-2xl font-bold text-gray-900 mb-4">API & Integrations</h4>
-          <p class="text-gray-600 mb-6 leading-relaxed">Connect BottleCRM with your existing tools through our comprehensive API. Build custom integrations, automate workflows, and create a unified business ecosystem.</p>
+          <p class="text-gray-600 mb-6 leading-relaxed">Connect BMSuite with your existing tools through our comprehensive API. Build custom integrations, automate workflows, and create a unified business ecosystem.</p>
           
           <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
             <div class="flex items-center text-sm text-gray-700">
@@ -881,7 +881,7 @@
           </div>
           
           <h4 class="text-2xl font-bold text-gray-900 mb-4">Self-Hosting & Deployment</h4>
-          <p class="text-gray-600 mb-6 leading-relaxed">Deploy BottleCRM on your own infrastructure for complete control. Choose from various hosting options, scale as needed, and maintain full data sovereignty.</p>
+          <p class="text-gray-600 mb-6 leading-relaxed">Deploy BMSuite on your own infrastructure for complete control. Choose from various hosting options, scale as needed, and maintain full data sovereignty.</p>
           
           <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
             <div class="flex items-center text-sm text-gray-700">
@@ -925,7 +925,7 @@
     <div class="mb-20">
       <div class="text-center mb-12">
         <h3 class="text-3xl font-bold text-gray-900 mb-4">Customization & Flexibility</h3>
-        <p class="text-lg text-gray-600">Adapt BottleCRM to your unique business needs</p>
+        <p class="text-lg text-gray-600">Adapt BMSuite to your unique business needs</p>
       </div>
 
       <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
@@ -943,7 +943,7 @@
           </div>
           
           <h4 class="text-2xl font-bold text-gray-900 mb-4">Complete Customization</h4>
-          <p class="text-gray-600 mb-6 leading-relaxed">Tailor BottleCRM to your exact business needs with extensive customization options. Modify workflows, create custom fields, and adapt the interface to match your processes.</p>
+          <p class="text-gray-600 mb-6 leading-relaxed">Tailor BMSuite to your exact business needs with extensive customization options. Modify workflows, create custom fields, and adapt the interface to match your processes.</p>
           
           <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
             <div class="flex items-center text-sm text-gray-700">
@@ -995,7 +995,7 @@
           </div>
           
           <h4 class="text-2xl font-bold text-gray-900 mb-4">Multi-language Support</h4>
-          <p class="text-gray-600 mb-6 leading-relaxed">Use BottleCRM in your preferred language with comprehensive internationalization support. Easily add new languages and adapt to local business requirements.</p>
+          <p class="text-gray-600 mb-6 leading-relaxed">Use BMSuite in your preferred language with comprehensive internationalization support. Easily add new languages and adapt to local business requirements.</p>
           
           <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
             <div class="flex items-center text-sm text-gray-700">
@@ -1045,7 +1045,7 @@
         Built with Modern Technology
       </h2>
       <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-        BottleCRM is built using cutting-edge technologies to ensure performance, security, and maintainability.
+        BMSuite is built using cutting-edge technologies to ensure performance, security, and maintainability.
       </p>
     </div>
 
@@ -1082,7 +1082,7 @@
         Compare Feature Availability
       </h2>
       <p class="text-xl text-gray-600">
-        See what's available now and what's coming soon in BottleCRM development roadmap.
+        See what's available now and what's coming soon in BMSuite development roadmap.
       </p>
     </div>
 
@@ -1191,10 +1191,10 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
       <h2 class="text-4xl font-extrabold text-gray-900 sm:text-5xl mb-6">
-        Why Choose BottleCRM?
+        Why Choose BMSuite?
       </h2>
       <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-        Unlike traditional CRM solutions, BottleCRM offers enterprise-grade features without the enterprise price tag.
+        Unlike traditional CRM solutions, BMSuite offers enterprise-grade features without the enterprise price tag.
       </p>
     </div>
 
@@ -1256,7 +1256,7 @@
         </div>
         <h3 class="text-2xl font-bold text-gray-900 mb-4">Unlimited Customization</h3>
         <p class="text-gray-600 mb-6">
-          Modify and extend BottleCRM to fit your exact needs. Open-source means no limitations on customization.
+          Modify and extend BMSuite to fit your exact needs. Open-source means no limitations on customization.
         </p>
         <ul class="text-left space-y-2">
           <li class="flex items-center text-sm text-gray-700">
@@ -1284,7 +1284,7 @@
       Ready to Experience Professional CRM Features?
     </h2>
     <p class="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-      Join businesses that have chosen BottleCRM for enterprise-grade features without enterprise costs.
+      Join businesses that have chosen BMSuite for enterprise-grade features without enterprise costs.
     </p>
     
     <div class="flex flex-col sm:flex-row sm:justify-center space-y-4 sm:space-y-0 sm:space-x-6">

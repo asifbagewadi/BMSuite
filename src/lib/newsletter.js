@@ -28,18 +28,18 @@ export function isValidEmail(email) {
  */
 export function generateWelcomeEmail(email, unsubscribeLink) {
   return {
-    subject: 'Welcome to BottleCRM Newsletter!',
+    subject: 'Welcome to BMSuite Newsletter!',
     html: `
       <!DOCTYPE html>
       <html>
       <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Welcome to BottleCRM Newsletter</title>
+        <title>Welcome to BMSuite Newsletter</title>
       </head>
       <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
         <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 10px; text-align: center; margin-bottom: 30px;">
-          <h1 style="color: white; margin: 0; font-size: 28px;">Welcome to BottleCRM!</h1>
+          <h1 style="color: white; margin: 0; font-size: 28px;">Welcome to BMSuite!</h1>
           <p style="color: #f0f0f0; margin: 10px 0 0 0; font-size: 16px;">Thank you for subscribing to our newsletter</p>
         </div>
         
@@ -54,17 +54,17 @@ export function generateWelcomeEmail(email, unsubscribeLink) {
         </div>
         
         <div style="text-align: center; margin-bottom: 30px;">
-          <a href="https://bottlecrm.io/demo" style="background: #667eea; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; display: inline-block; font-weight: bold;">Try BottleCRM Free</a>
+          <a href="https://bottlecrm.io/demo" style="background: #667eea; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; display: inline-block; font-weight: bold;">Try BMSuite Free</a>
         </div>
         
         <div style="text-align: center; color: #666; font-size: 14px; border-top: 1px solid #ddd; padding-top: 20px;">
-          <p>You're receiving this email because you subscribed to BottleCRM newsletter.</p>
+          <p>You're receiving this email because you subscribed to BMSuite newsletter.</p>
           <p>
             <a href="${unsubscribeLink}" style="color: #666; text-decoration: underline;">Unsubscribe</a> | 
             <a href="https://bottlecrm.io" style="color: #666; text-decoration: underline;">Visit Website</a>
           </p>
           <p style="margin-top: 20px;">
-            <strong>BottleCRM</strong> by MicroPyramid<br>
+            <strong>BMSuite</strong> by MicroPyramid<br>
             The free, open-source CRM for startups
           </p>
         </div>
@@ -72,7 +72,7 @@ export function generateWelcomeEmail(email, unsubscribeLink) {
       </html>
     `,
     text: `
-      Welcome to BottleCRM Newsletter!
+      Welcome to BMSuite Newsletter!
       
       Thank you for subscribing to our newsletter. Here's what you can expect:
       
@@ -81,12 +81,12 @@ export function generateWelcomeEmail(email, unsubscribeLink) {
       • Industry Insights: Stay ahead with the latest CRM trends and strategies
       • Exclusive Content: Guides and resources available only to subscribers
       
-      Try BottleCRM Free: https://bottlecrm.io/demo
+      Try BMSuite Free: https://bottlecrm.io/demo
       
-      You're receiving this email because you subscribed to BottleCRM newsletter.
+      You're receiving this email because you subscribed to BMSuite newsletter.
       To unsubscribe, visit: ${unsubscribeLink}
       
-      BottleCRM by MicroPyramid
+      BMSuite by MicroPyramid
       The free, open-source CRM for startups
       https://bottlecrm.io
     `
@@ -134,13 +134,13 @@ export function generateNewsletterTemplate(content, unsubscribeLink) {
         </div>
         
         <div style="text-align: center; color: #666; font-size: 14px; border-top: 1px solid #ddd; padding-top: 20px;">
-          <p>You're receiving this email because you subscribed to BottleCRM newsletter.</p>
+          <p>You're receiving this email because you subscribed to BMSuite newsletter.</p>
           <p>
             <a href="${unsubscribeLink}" style="color: #666; text-decoration: underline;">Unsubscribe</a> | 
             <a href="https://bottlecrm.io" style="color: #666; text-decoration: underline;">Visit Website</a>
           </p>
           <p style="margin-top: 20px;">
-            <strong>BottleCRM</strong> by MicroPyramid<br>
+            <strong>BMSuite</strong> by MicroPyramid<br>
             The free, open-source CRM for startups
           </p>
         </div>

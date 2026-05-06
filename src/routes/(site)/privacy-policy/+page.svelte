@@ -19,13 +19,13 @@
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Privacy Policy | BottleCRM",
-    "description": "Read the privacy policy for BottleCRM, the free and open-source CRM. Learn how your data is protected, your privacy rights, and how self-hosting ensures full control.",
+    "name": "Privacy Policy | BMSuite",
+    "description": "Read the privacy policy for BMSuite, the free and open-source CRM. Learn how your data is protected, your privacy rights, and how self-hosting ensures full control.",
     "url": "https://bottlecrm.io/privacy-policy",
     "dateModified": "2025-06-01",
     "publisher": {
       "@type": "Organization",
-      "name": "BottleCRM",
+      "name": "BMSuite",
       "url": "https://bottlecrm.io",
       "logo": {
         "@type": "ImageObject",
@@ -36,24 +36,24 @@
 </script>
 
 <svelte:head>
-  <title>Privacy Policy | BottleCRM - Free Open Source CRM for Data Privacy</title>
-  <meta name="description" content="Read the privacy policy for BottleCRM, the free and open-source CRM. Learn how your data is protected, your privacy rights, and how self-hosting ensures full control." />
-  <meta name="keywords" content="privacy policy, free crm, open source crm, data privacy, GDPR, self-hosted CRM, data security, BottleCRM" />
+  <title>Privacy Policy | BMSuite - Free Open Source CRM for Data Privacy</title>
+  <meta name="description" content="Read the privacy policy for BMSuite, the free and open-source CRM. Learn how your data is protected, your privacy rights, and how self-hosting ensures full control." />
+  <meta name="keywords" content="privacy policy, free crm, open source crm, data privacy, GDPR, self-hosted CRM, data security, BMSuite" />
   <link rel="canonical" href="https://bottlecrm.io/privacy-policy" />
   <meta name="robots" content="index, follow" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Privacy Policy | BottleCRM - Free Open Source CRM for Data Privacy" />
-  <meta property="og:description" content="Read how BottleCRM protects your data and privacy. Free, open-source, and self-hosted CRM for businesses." />
+  <meta property="og:title" content="Privacy Policy | BMSuite - Free Open Source CRM for Data Privacy" />
+  <meta property="og:description" content="Read how BMSuite protects your data and privacy. Free, open-source, and self-hosted CRM for businesses." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bottlecrm.io/privacy-policy" />
-  <meta property="og:site_name" content="BottleCRM" />
+  <meta property="og:site_name" content="BMSuite" />
   <meta property="og:image" content="https://bottlecrm.io/og-image.png" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Privacy Policy | BottleCRM - Free Open Source CRM" />
-  <meta name="twitter:description" content="BottleCRM is a free, open-source CRM. Read our privacy policy to learn how your data is protected and your privacy rights are respected." />
+  <meta name="twitter:title" content="Privacy Policy | BMSuite - Free Open Source CRM" />
+  <meta name="twitter:description" content="BMSuite is a free, open-source CRM. Read our privacy policy to learn how your data is protected and your privacy rights are respected." />
   <meta name="twitter:image" content="https://bottlecrm.io/og-image.png" />
 
   <!-- Schema.org JSON-LD -->
@@ -89,7 +89,7 @@
         Privacy Policy
       </h1>
       <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-        At BottleCRM, we believe in complete transparency about how we handle your data. 
+        At BMSuite, we believe in complete transparency about how we handle your data. 
         As a self-hostable, open-source CRM, your privacy and data ownership are fundamental rights.
       </p>
       
@@ -115,7 +115,7 @@
         Our Privacy Principles
       </h2>
       <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-        BottleCRM is built on the foundation of user privacy and data ownership.
+        BMSuite is built on the foundation of user privacy and data ownership.
       </p>
     </div>
 
@@ -125,7 +125,7 @@
           <Shield class="h-6 w-6 text-blue-600" />
         </div>
         <h3 class="text-lg font-bold text-gray-900 mb-2">Data Ownership</h3>
-        <p class="text-gray-600 text-sm">When you self-host BottleCRM, you maintain complete ownership and control of your data.</p>
+        <p class="text-gray-600 text-sm">When you self-host BMSuite, you maintain complete ownership and control of your data.</p>
       </div>
 
       <div class="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-all duration-300">
@@ -172,7 +172,7 @@
             <Server class="w-6 h-6 text-blue-500 mr-3 mt-1 flex-shrink-0" />
             <div>
               <h4 class="font-semibold text-blue-900 mb-2">Self-Hosted Deployments</h4>
-              <p class="text-blue-800">When you self-host BottleCRM, we do not collect any of your business data, customer information, or usage analytics. All data remains on your servers under your complete control.</p>
+              <p class="text-blue-800">When you self-host BMSuite, we do not collect any of your business data, customer information, or usage analytics. All data remains on your servers under your complete control.</p>
             </div>
           </div>
         </div>
@@ -221,7 +221,7 @@
               <li>• Responding to support requests and inquiries</li>
               <li>• Improving our website and documentation</li>
               <li>• Providing professional services when requested</li>
-              <li>• Communicating important updates about BottleCRM</li>
+              <li>• Communicating important updates about BMSuite</li>
             </ul>
           </div>
           
@@ -247,7 +247,7 @@
         <div class="bg-gray-50 p-6 rounded-xl mb-6">
           <h4 class="font-semibold text-gray-900 mb-3">Self-Hosted Security</h4>
           <p class="text-gray-700 mb-4">
-            When you self-host BottleCRM, you are responsible for implementing appropriate security measures. 
+            When you self-host BMSuite, you are responsible for implementing appropriate security measures. 
             We provide documentation and best practices to help secure your installation.
           </p>
           <ul class="space-y-2 text-gray-700 text-sm">
@@ -329,7 +329,7 @@
 
         <h4 class="font-semibold text-gray-900 mb-3">Self-Hosted Integrations</h4>
         <p class="text-gray-700 mb-4">
-          BottleCRM may support integrations with third-party services (email providers, payment processors, etc.). 
+          BMSuite may support integrations with third-party services (email providers, payment processors, etc.). 
           When you configure these integrations in your self-hosted instance, you are responsible for reviewing 
           and accepting the privacy policies of those services.
         </p>
@@ -407,7 +407,7 @@
     </h2>
     <p class="text-xl text-blue-100 mb-8">
       Ready to switch to a CRM solution that truly respects your privacy? 
-      Self-host BottleCRM and maintain complete control over your business data.
+      Self-host BMSuite and maintain complete control over your business data.
     </p>
     <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
       <a href="/login" 

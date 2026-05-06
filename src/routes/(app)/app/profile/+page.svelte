@@ -91,7 +91,7 @@
 </script>
 
 <svelte:head>
-    <title>Profile - BottleCRM</title>
+    <title>Profile - BMSuite</title>
 </svelte:head>
 
 <div class="max-w-4xl mx-auto">

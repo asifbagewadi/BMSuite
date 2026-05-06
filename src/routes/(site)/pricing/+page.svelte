@@ -49,21 +49,21 @@
 </script>
 
 <svelte:head>
-  <title>BottleCRM Pricing – Free Open Source CRM & Affordable Support</title>
-  <meta name="description" content="BottleCRM is a 100% free, open-source CRM with unlimited users and no monthly fees. Compare costs, calculate your savings, and discover optional professional support for easy setup and customization." />
+  <title>BMSuite Pricing – Free Open Source CRM & Affordable Support</title>
+  <meta name="description" content="BMSuite is a 100% free, open-source CRM with unlimited users and no monthly fees. Compare costs, calculate your savings, and discover optional professional support for easy setup and customization." />
   <meta name="keywords" content="free crm, open source crm, crm pricing, crm cost, crm comparison, affordable crm, crm software, unlimited users crm, crm support, crm setup" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="BottleCRM Pricing – Free Open Source CRM & Affordable Support" />
-  <meta property="og:description" content="BottleCRM is a free, open-source CRM with unlimited users. Calculate your savings and see how it compares to paid CRM solutions." />
+  <meta property="og:title" content="BMSuite Pricing – Free Open Source CRM & Affordable Support" />
+  <meta property="og:description" content="BMSuite is a free, open-source CRM with unlimited users. Calculate your savings and see how it compares to paid CRM solutions." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bottlecrm.io/pricing" />
   <meta property="og:image" content="https://bottlecrm.io/og-image.png" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="BottleCRM Pricing – Free Open Source CRM & Affordable Support" />
-  <meta name="twitter:description" content="BottleCRM is a free, open-source CRM with unlimited users. Calculate your savings and see how it compares to paid CRM solutions." />
+  <meta name="twitter:title" content="BMSuite Pricing – Free Open Source CRM & Affordable Support" />
+  <meta name="twitter:description" content="BMSuite is a free, open-source CRM with unlimited users. Calculate your savings and see how it compares to paid CRM solutions." />
   <meta name="twitter:image" content="https://bottlecrm.io/og-image.png" />
 
   <!-- Structured Data -->
@@ -71,11 +71,11 @@
     {`{
       "@context": "https://schema.org",
       "@type": "Product",
-      "name": "BottleCRM",
+      "name": "BMSuite",
       "description": "Free, open-source CRM software with unlimited users and optional professional support.",
       "brand": {
         "@type": "Brand",
-        "name": "BottleCRM"
+        "name": "BMSuite"
       },
       "offers": {
         "@type": "Offer",
@@ -102,7 +102,7 @@
       </h1>
       
       <p class="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed">
-        Stop paying $1,800-50,000 per year for CRM software. BottleCRM gives you enterprise-grade features without the enterprise price tag. Professional support available when you need it.
+        Stop paying $1,800-50,000 per year for CRM software. BMSuite gives you enterprise-grade features without the enterprise price tag. Professional support available when you need it.
       </p>
       
       <div class="flex flex-col sm:flex-row sm:justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
@@ -139,7 +139,7 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
       <h2 class="text-4xl font-extrabold text-gray-900 mb-6">
-        Choose Your BottleCRM Experience
+        Choose Your BMSuite Experience
       </h2>
       <p class="text-xl text-gray-600 max-w-3xl mx-auto">
         Start with our free CRM software. Add professional support services when you need expert help with setup, customization, or deployment.
@@ -147,7 +147,7 @@
     </div>
 
     <div class="grid gap-8 lg:grid-cols-3">
-      <!-- BottleCRM Core -->
+      <!-- BMSuite Core -->
       <div class="bg-white rounded-2xl shadow-xl p-8 relative transition-all duration-300 hover:scale-105">
         <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
           <span class="inline-flex items-center px-4 py-2 rounded-full text-sm font-bold text-gray-700 bg-gray-100 border border-gray-200">
@@ -159,7 +159,7 @@
           <div class="mb-4">
             <Download class="w-12 h-12 text-blue-600 mx-auto" />
           </div>
-          <h3 class="text-2xl font-bold text-gray-900 mb-2">BottleCRM Core</h3>
+          <h3 class="text-2xl font-bold text-gray-900 mb-2">BMSuite Core</h3>
           <p class="text-gray-600 mb-4">Complete CRM solution with all essential features. Perfect for startups and small businesses.</p>
           
           <div class="mb-6">
@@ -381,7 +381,7 @@
         Calculate Your Annual Savings
       </h2>
       <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-        See how much money your business can save by switching to BottleCRM from typical subscription-based CRM solutions.
+        See how much money your business can save by switching to BMSuite from typical subscription-based CRM solutions.
       </p>
     </div>
 
@@ -429,7 +429,7 @@
               <span class="text-xl font-bold text-red-600">${calculatedSavings.toLocaleString()}</span>
             </div>
             <div class="flex justify-between items-center py-3 border-b border-gray-200">
-              <span class="text-gray-600">Annual cost with BottleCRM:</span>
+              <span class="text-gray-600">Annual cost with BMSuite:</span>
               <span class="text-xl font-bold text-green-600">$0</span>
             </div>
             <div class="flex justify-between items-center py-4 bg-green-50 rounded-lg px-4">
@@ -465,7 +465,7 @@
         Feature & Cost Comparison vs Market Leaders
       </h2>
       <p class="text-xl text-gray-600">
-        See how BottleCRM compares to typical enterprise CRM solutions across key factors.
+        See how BMSuite compares to typical enterprise CRM solutions across key factors.
       </p>
     </div>
 
@@ -474,7 +474,7 @@
         <thead class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
           <tr>
             <th class="px-6 py-4 text-left text-sm font-semibold">Feature</th>
-            <th class="px-6 py-4 text-center text-sm font-semibold bg-green-600">BottleCRM</th>
+            <th class="px-6 py-4 text-center text-sm font-semibold bg-green-600">BMSuite</th>
             <th class="px-6 py-4 text-center text-sm font-semibold">Enterprise CRM A</th>
             <th class="px-6 py-4 text-center text-sm font-semibold">Popular CRM B</th>
             <th class="px-6 py-4 text-center text-sm font-semibold">Business CRM C</th>
@@ -576,7 +576,7 @@
         Pricing Questions & Answers
       </h2>
       <p class="text-xl text-gray-600">
-        Everything you need to know about BottleCRM pricing and support services.
+        Everything you need to know about BMSuite pricing and support services.
       </p>
     </div>
 
@@ -589,14 +589,14 @@
           aria-expanded={activeFaq === 0}
         >
           <div class="flex justify-between items-center">
-            <h3 class="text-lg font-semibold text-gray-900 pr-4">Is BottleCRM really completely free?</h3>
+            <h3 class="text-lg font-semibold text-gray-900 pr-4">Is BMSuite really completely free?</h3>
             <ChevronDown class="w-5 h-5 text-gray-500 transform transition-transform duration-200 {activeFaq === 0 ? 'rotate-180' : ''}" />
           </div>
         </button>
         
         {#if activeFaq === 0}
           <div class="px-6 pb-5">
-            <p class="text-gray-700 leading-relaxed">Yes! BottleCRM core software is 100% free with no hidden costs, user limits, or subscription fees. You only pay if you want professional setup, customization, or ongoing support services.</p>
+            <p class="text-gray-700 leading-relaxed">Yes! BMSuite core software is 100% free with no hidden costs, user limits, or subscription fees. You only pay if you want professional setup, customization, or ongoing support services.</p>
           </div>
         {/if}
       </div>

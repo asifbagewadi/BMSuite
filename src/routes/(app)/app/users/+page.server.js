@@ -82,7 +82,7 @@ export const actions = {
                 }
                 locals.org_name = name;
             }
-            return { success: true };
+            return { success: true, message: 'Organization details updated successfully' };
         } catch (err) {
             return fail(500, { error: 'Failed to update organization' });
         }
@@ -108,15 +108,23 @@ export const actions = {
         const role = /** @type {UserRole} */ (roleString);
         if (!email || !role) return fail(400, { error: 'Email and role are required' });
 
-        // Find user by email
-        const foundUser = await prisma.user.findUnique({ where: { email } });
-        if (!foundUser) return fail(404, { error: 'No user found with that email' });
+        // Find user by email or create them if they do not exist
+        let foundUser = await prisma.user.findUnique({ where: { email } });
+        if (!foundUser) {
+            foundUser = await prisma.user.create({
+                data: {
+                    email,
+                    user_id: crypto.randomUUID(),
+                    name: email.split('@')[0] // Generic fallback name
+                }
+            });
+        }
 
         // Check if already in org
         const already = await prisma.userOrganization.findFirst({
             where: { userId: foundUser.id, organizationId: org_id }
         });
-        if (already) return fail(400, { error: 'User already in organization' });
+        if (already) return fail(400, { error: 'User already present' });
 
         // Add user to org
         await prisma.userOrganization.create({
@@ -126,7 +134,7 @@ export const actions = {
                 role
             }
         });
-        return { success: true };
+        return { success: true, message: 'User successfully added to the organization' };
     },
 
     edit_role: async ({ request, params, locals }) => {
@@ -174,7 +182,7 @@ export const actions = {
             where: { userId_organizationId: { userId: user_id, organizationId: org_id } },
             data: { role }
         });
-        return { success: true };
+        return { success: true, message: 'User role updated successfully' };
     },
 
     remove_user: async ({ request, params, locals }) => {
@@ -217,6 +225,6 @@ export const actions = {
         await prisma.userOrganization.delete({
             where: { userId_organizationId: { userId: user_id, organizationId: org_id } }
         });
-        return { success: true };
+        return { success: true, message: 'User removed from organization successfully' };
     }
 };

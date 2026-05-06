@@ -17,7 +17,7 @@
   let slug = $derived(make_slug(title));
 </script>
 
-<div class="max-w-xl mx-auto mt-10 p-6 bg-white rounded shadow">
+<div class="max-w-xl mx-auto mt-10 p-6 bg-white dark:bg-gray-800 rounded shadow">
   <h1 class="text-2xl font-bold mb-6">Create New Blog</h1>
 
   {#if form?.error}

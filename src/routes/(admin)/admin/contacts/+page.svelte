@@ -16,11 +16,11 @@
 
 <div class="p-6">
     <div class="mb-6">
-        <h1 class="text-3xl font-bold text-gray-900">Contact Submissions</h1>
+        <h1 class="text-3xl font-bold text-gray-900 dark:text-white">Contact Submissions</h1>
     </div>
 
     {#if data.contacts && data.contacts.length > 0}
-        <div class="overflow-x-auto bg-white shadow-lg rounded-lg">
+        <div class="overflow-x-auto bg-white dark:bg-gray-800 shadow-lg rounded-lg">
             <table class="min-w-full divide-y divide-gray-200">
                 <thead class="bg-gray-50">
                     <tr>
@@ -41,12 +41,12 @@
                         </th>
                     </tr>
                 </thead>
-                <tbody class="bg-white divide-y divide-gray-200">
+                <tbody class="bg-white dark:bg-gray-800 divide-y divide-gray-200">
                     {#each data.contacts as contact}
                         <tr class="hover:bg-gray-50 transition-colors">
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <div class="flex flex-col">
-                                    <div class="text-sm font-medium text-gray-900">{contact.name}</div>
+                                    <div class="text-sm font-medium text-gray-900 dark:text-white">{contact.name}</div>
                                     <div class="text-sm text-gray-500">{contact.email}</div>
                                 </div>
                             </td>
@@ -56,7 +56,7 @@
                                 </span>
                             </td>
                             <td class="px-6 py-4">
-                                <div class="text-sm text-gray-900 max-w-md whitespace-pre-wrap break-words">
+                                <div class="text-sm text-gray-900 dark:text-white max-w-md whitespace-pre-wrap break-words">
                                     {contact.message}
                                 </div>
                             </td>
@@ -81,7 +81,7 @@
             </table>
         </div>
         
-        <div class="mt-4 text-sm text-gray-600">
+        <div class="mt-4 text-sm text-gray-600 dark:text-gray-400">
             Total submissions: {data.contacts.length}
         </div>
     {:else}
@@ -91,7 +91,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2 2v-5m16 0h-5m-7 0h5"/>
                 </svg>
             </div>
-            <h3 class="mt-2 text-sm font-medium text-gray-900">No contact submissions</h3>
+            <h3 class="mt-2 text-sm font-medium text-gray-900 dark:text-white">No contact submissions</h3>
             <p class="mt-1 text-sm text-gray-500">No contact form requests have been submitted yet.</p>
         </div>
     {/if}

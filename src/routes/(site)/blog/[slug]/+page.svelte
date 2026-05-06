@@ -10,8 +10,8 @@
 </script>
 
 <svelte:head>
-  <title>{post.title} | BottleCRM Blog</title>
-  <meta name="description" content={post.excerpt || `Read ${post.title} on the BottleCRM blog`} />
+  <title>{post.title} | BMSuite Blog</title>
+  <meta name="description" content={post.excerpt || `Read ${post.title} on the BMSuite blog`} />
 </svelte:head>
 
 <article class="bg-white">

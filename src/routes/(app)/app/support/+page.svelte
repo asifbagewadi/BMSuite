@@ -9,7 +9,7 @@
     <div class="container mx-auto px-4 py-8 max-w-4xl">
         <!-- Header Section -->
         <div class="text-center mb-12">
-            <h1 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white">BottleCRM Support</h1>
+            <h1 class="text-4xl font-bold mb-4 text-gray-900 dark:text-white">BMSuite Support</h1>
             <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
                 Empowering startups with free, open-source CRM solutions. 
                 Say goodbye to expensive subscription fees.
@@ -25,7 +25,7 @@
                 <div>
                     <h2 class="text-2xl font-semibold mb-3 text-gray-900 dark:text-white">Our Mission</h2>
                     <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
-                        BottleCRM addresses the high subscription costs of commercial CRM alternatives by providing 
+                        BMSuite addresses the high subscription costs of commercial CRM alternatives by providing 
                         a completely free, open-source, and highly customizable solution. Clone it, self-host it, 
                         and make it yours - forever free.
                     </p>
@@ -87,7 +87,7 @@
                 <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Feature Requests & Ideas</h3>
             </div>
             <p class="text-gray-600 dark:text-gray-300 mb-4">
-                Have an idea to make BottleCRM better? We'd love to hear from you! Share your feature 
+                Have an idea to make BMSuite better? We'd love to hear from you! Share your feature 
                 requests and help shape the future of open-source CRM.
             </p>
             <a 
@@ -110,7 +110,7 @@
                 <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Bug Reports</h3>
             </div>
             <p class="text-gray-600 dark:text-gray-300 mb-4">
-                Found a bug? Help us improve BottleCRM by reporting issues. Your feedback helps 
+                Found a bug? Help us improve BMSuite by reporting issues. Your feedback helps 
                 make the platform more stable for everyone.
             </p>
             <a 
@@ -137,7 +137,7 @@
                 please report them privately. Do not create public GitHub issues for security concerns.
             </p>
             <a 
-                href="mailto:ashwin@micropyramid.com?subject=Security%20Issue%20-%20BottleCRM" 
+                href="mailto:ashwin@micropyramid.com?subject=Security%20Issue%20-%20BMSuite" 
                 class="inline-flex items-center gap-2 bg-red-600 dark:bg-red-700 text-white px-4 py-2 rounded-lg hover:bg-red-700 dark:hover:bg-red-600 transition-colors"
             >
                 <Mail class="w-4 h-4" />
@@ -154,7 +154,7 @@
                 <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Custom CRM Development</h3>
             </div>
             <p class="text-gray-600 dark:text-gray-300 mb-4">
-                Need BottleCRM tailored to your specific business needs? We offer professional 
+                Need BMSuite tailored to your specific business needs? We offer professional 
                 customization services including hosting, custom features, integrations, and ongoing support.
             </p>
             <div class="flex flex-col sm:flex-row gap-3">

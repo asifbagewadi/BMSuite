@@ -13,14 +13,29 @@
 		X,
 		Trash2
 	} from '@lucide/svelte';
+	import { fade, slide } from 'svelte/transition';
 
-	/** @type {{ organization: any, users: any[], user: { id: string } }} */
-	export let data;
+	import { enhance } from '$app/forms';
+
+	/** @type {{ data: { organization: any, users: any[], user: { id: string } }, form: any }} */
+	let { data, form } = $props();
+
 	/** @type {any} */
-	let org = data.organization;
-	let editing = false;
-	/** @type {{ name: string, domain: string, description: string }} */
-	let formOrg = { name: org?.name || '', domain: org?.domain || '', description: org?.description || '' };
+	let org = $derived(data.organization);
+	let editing = $state(false);
+	let formOrg = $state({ name: org?.name || '', domain: org?.domain || '', description: org?.description || '' });
+	
+	let showNotification = $state(false);
+
+	$effect(() => {
+		if (form) {
+			showNotification = true;
+			const timer = setTimeout(() => {
+				showNotification = false;
+			}, 5000);
+			return () => clearTimeout(timer);
+		}
+	});
 	
 	function startEdit() {
 		formOrg = { name: org?.name || '', domain: org?.domain || '', description: org?.description || '' };
@@ -32,9 +47,9 @@
 	}
 
 	// Get logged-in user id from data (must be provided by server load)
-	let loggedInUserId = data.user?.id;
+	let loggedInUserId = $derived(data.user?.id);
 	/** @type {Array<{id: string, name: string, email: string, role: string, joined: string, avatar: string, isSelf: boolean, editingRole: boolean}>} */
-	let users = Array.isArray(data.users)
+	let users = $derived(Array.isArray(data.users)
 		? data.users.map((u) => ({
 				id: u.user.id,
 				name: u.user.name || u.user.email,
@@ -49,7 +64,7 @@
 				isSelf: loggedInUserId === u.user.id,
 				editingRole: false
 			}))
-		: [];
+		: []);
 
 	// Map roles to icons (only ADMIN and USER exist in schema)
 	/** @type {Record<string, any>} */
@@ -81,6 +96,32 @@
 				Logout
 			</a>
 		</div>
+
+		{#if showNotification && form?.success}
+			<div 
+				transition:slide={{ duration: 300 }}
+				class="mb-6 p-4 rounded-xl bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 text-green-800 dark:text-green-300 flex items-center gap-3"
+			>
+				<Check class="h-5 w-5" />
+				<span class="font-medium">{form.message || 'Action successful!'}</span>
+				<button onclick={() => showNotification = false} class="ml-auto hover:opacity-70 transition-opacity">
+					<X class="h-4 w-4" />
+				</button>
+			</div>
+		{/if}
+
+		{#if showNotification && form?.error}
+			<div 
+				transition:slide={{ duration: 300 }}
+				class="mb-6 p-4 rounded-xl bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-800 dark:text-red-300 flex items-center gap-3"
+			>
+				<X class="h-5 w-5" />
+				<span class="font-medium">{form.error}</span>
+				<button onclick={() => showNotification = false} class="ml-auto hover:opacity-70 transition-opacity">
+					<X class="h-4 w-4" />
+				</button>
+			</div>
+		{/if}
 
 		<!-- Organization Details Card -->
 		<div class="mb-8 overflow-hidden rounded-xl bg-white dark:bg-gray-800 shadow-sm ring-1 ring-gray-200 dark:ring-gray-700">
@@ -123,7 +164,7 @@
 				{/if}
 
 				{#if editing}
-					<form method="POST" action="?/update" class="mt-6 space-y-6">
+					<form method="POST" action="?/update" use:enhance class="mt-6 space-y-6">
 						<div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
 							<div>
 								<label for="org-name" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
@@ -215,7 +256,7 @@
 						<Plus class="h-4 w-4" />
 						Add New Member
 					</h4>
-					<form method="POST" action="?/add_user" class="flex flex-col gap-4 sm:flex-row sm:items-end">
+					<form method="POST" action="?/add_user" use:enhance class="flex flex-col gap-4 sm:flex-row sm:items-end">
 						<div class="flex-1">
 							<label for="add-user-email" class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
 								Email Address <span class="text-red-500">*</span>
@@ -313,7 +354,7 @@
 												</span>
 											{:else}
 												{#if user.editingRole}
-													<form method="POST" action="?/edit_role" class="flex items-center gap-2">
+													<form method="POST" action="?/edit_role" use:enhance class="flex items-center gap-2">
 														<input type="hidden" name="user_id" value={user.id} />
 														<label for="role-select-{user.id}" class="sr-only">User Role</label>
 														<select 
@@ -368,6 +409,7 @@
 												<form 
 													method="POST" 
 													action="?/remove_user" 
+													use:enhance
 													class="inline"
 													onsubmit={(e) => {
 														if (!confirm('Remove this user from the organization?')) {

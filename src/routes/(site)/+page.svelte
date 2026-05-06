@@ -40,7 +40,7 @@
   const schema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "BottleCRM",
+    "name": "BMSuite",
     "description": "Free, open-source CRM software for startups and small businesses. Self-hosted, unlimited users, no subscription fees.",
     "url": "https://bottlecrm.io",
     "applicationCategory": "BusinessApplication",
@@ -59,8 +59,8 @@
 </script>
 
 <svelte:head>
-  <title>BottleCRM: Free Open Source CRM for Startups & Small Business</title>
-  <meta name="description" content="BottleCRM is a free, open-source CRM for startups and small businesses. Self-host, manage contacts, sales, and tasks. No subscription fees. Download now!" />
+  <title>BMSuite: Free Open Source CRM for Startups & Small Business</title>
+  <meta name="description" content="BMSuite is a free, open-source CRM for startups and small businesses. Self-host, manage contacts, sales, and tasks. No subscription fees. Download now!" />
   <meta name="keywords" content="free crm, open source crm, crm software, startup crm, small business crm, self hosted crm, customer relationship management" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://bottlecrm.io/" />
@@ -68,14 +68,14 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bottlecrm.io/" />
-  <meta property="og:title" content="BottleCRM: Free Open Source CRM for Startups & Small Business" />
+  <meta property="og:title" content="BMSuite: Free Open Source CRM for Startups & Small Business" />
   <meta property="og:description" content="Free, open-source CRM for startups and small businesses. Self-host, unlimited users, no subscription fees." />
   <meta property="og:image" content="https://bottlecrm.io/og-image.png" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://bottlecrm.io/" />
-  <meta name="twitter:title" content="BottleCRM: Free Open Source CRM for Startups & Small Business" />
+  <meta name="twitter:title" content="BMSuite: Free Open Source CRM for Startups & Small Business" />
   <meta name="twitter:description" content="Free, open-source CRM for startups and small businesses. Self-host, unlimited users, no subscription fees." />
   <meta name="twitter:image" content="https://bottlecrm.io/twitter-image.png" />
 
@@ -102,7 +102,7 @@
           The Free <span class="text-yellow-300">CRM Software</span> That Startups Actually Need
         </h1>
         <p class="text-xl md:text-2xl mb-8 text-blue-100 leading-relaxed">
-          Stop paying $50-300/month for CRM subscriptions. BottleCRM is a 100% free, open-source, and self-hostable customer relationship management solution built specifically for startups and growing businesses.
+          Stop paying $50-300/month for CRM subscriptions. BMSuite is a 100% free, open-source, and self-hostable customer relationship management solution built specifically for startups and growing businesses.
         </p>
         
         <!-- Value proposition bullets -->
@@ -138,7 +138,7 @@
       <div class="w-full max-w-lg">
         <div class="bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl overflow-hidden border border-white/20">
           <div class="h-80 bg-gradient-to-br from-gray-100 to-gray-200 relative">
-            <img src="{banner_img}" alt="BottleCRM Dashboard Preview - Free CRM Software Interface" class="w-full h-full object-cover" />
+            <img src="{banner_img}" alt="BMSuite Dashboard Preview - Free CRM Software Interface" class="w-full h-full object-cover" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
           </div>
           <div class="p-6 bg-white/5">
@@ -364,7 +364,7 @@
         Take Your CRM <span class="text-yellow-300">On The Go</span>
       </h2>
       <p class="text-xl md:text-2xl mb-8 text-blue-100 leading-relaxed max-w-4xl mx-auto">
-        Introducing the BottleCRM mobile app - manage your customers, leads, and sales pipeline from anywhere. 
+        Introducing the BMSuite mobile app - manage your customers, leads, and sales pipeline from anywhere. 
         Built with Flutter for seamless cross-platform performance.
       </p>
     </div>
@@ -442,7 +442,7 @@
                   <div class="w-16 h-16 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl mx-auto mb-4 flex items-center justify-center">
                     <span class="text-white font-bold text-xl">B</span>
                   </div>
-                  <h3 class="text-xl font-bold text-gray-900">BottleCRM</h3>
+                  <h3 class="text-xl font-bold text-gray-900">BMSuite</h3>
                   <p class="text-gray-600 text-sm">Mobile CRM App</p>
                 </div>
                 
@@ -525,10 +525,10 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
       <h2 class="text-4xl font-extrabold text-gray-900 sm:text-5xl mb-6">
-        Why Choose BottleCRM Over <span class="text-red-600">Expensive CRM Solutions?</span>
+        Why Choose BMSuite Over <span class="text-red-600">Expensive CRM Solutions?</span>
       </h2>
       <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-        Compare BottleCRM with typical commercial CRM solutions and see how much you can save while getting powerful features.
+        Compare BMSuite with typical commercial CRM solutions and see how much you can save while getting powerful features.
       </p>
     </div>
 
@@ -549,7 +549,7 @@
             <tr class="border-b border-gray-200 bg-blue-50 border-l-4 border-l-blue-500">
               <td class="px-3 sm:px-6 py-4 font-semibold text-blue-700 whitespace-nowrap">
                 <div class="flex flex-col sm:flex-row sm:items-center">
-                  <span>BottleCRM</span>
+                  <span>BMSuite</span>
                   <span class="mt-1 sm:mt-0 sm:ml-2 text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full whitespace-nowrap">Recommended</span>
                 </div>
               </td>
@@ -612,7 +612,7 @@
 
     <div class="mt-8 text-center">
       <p class="text-lg text-gray-600 mb-4">
-        <strong class="text-green-600">Potential Annual Savings with BottleCRM:</strong> 
+        <strong class="text-green-600">Potential Annual Savings with BMSuite:</strong> 
         $3,000 - $36,000+ per year for a typical team
       </p>
       <a href="/pricing" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold">
@@ -631,7 +631,7 @@
         Frequently Asked Questions
       </h2>
       <p class="text-xl text-gray-600">
-        Everything you need to know about BottleCRM and free CRM software.
+        Everything you need to know about BMSuite and free CRM software.
       </p>
     </div>
 
@@ -643,14 +643,14 @@
           aria-expanded={activeFaq === 0}
         >
           <div class="flex justify-between items-center">
-            <h3 class="text-lg font-semibold text-gray-900 pr-4">Is BottleCRM really free to use?</h3>
+            <h3 class="text-lg font-semibold text-gray-900 pr-4">Is BMSuite really free to use?</h3>
             <ChevronDown class="w-5 h-5 text-gray-500 transform transition-transform duration-200 {activeFaq === 0 ? 'rotate-180' : ''}" />
           </div>
         </button>
         
         {#if activeFaq === 0}
           <div transition:fade="{{ duration: 200 }}" class="px-6 pb-5">
-            <p class="text-gray-700 leading-relaxed">Yes! BottleCRM is 100% free and open-source. You can download, install, customize, and use it without any subscription fees or hidden costs. We also offer optional paid support services for hosting and customization.</p>
+            <p class="text-gray-700 leading-relaxed">Yes! BMSuite is 100% free and open-source. You can download, install, customize, and use it without any subscription fees or hidden costs. We also offer optional paid support services for hosting and customization.</p>
           </div>
         {/if}
       </div>
@@ -662,14 +662,14 @@
           aria-expanded={activeFaq === 1}
         >
           <div class="flex justify-between items-center">
-            <h3 class="text-lg font-semibold text-gray-900 pr-4">How does BottleCRM compare to traditional CRM platforms?</h3>
+            <h3 class="text-lg font-semibold text-gray-900 pr-4">How does BMSuite compare to traditional CRM platforms?</h3>
             <ChevronDown class="w-5 h-5 text-gray-500 transform transition-transform duration-200 {activeFaq === 1 ? 'rotate-180' : ''}" />
           </div>
         </button>
         
         {#if activeFaq === 1}
           <div transition:fade="{{ duration: 200 }}" class="px-6 pb-5">
-            <p class="text-gray-700 leading-relaxed">BottleCRM offers many of the same core features as enterprise CRM platforms but without the high monthly costs. While some commercial CRMs might have more advanced features, BottleCRM provides everything most startups and small businesses need to manage customer relationships effectively.</p>
+            <p class="text-gray-700 leading-relaxed">BMSuite offers many of the same core features as enterprise CRM platforms but without the high monthly costs. While some commercial CRMs might have more advanced features, BMSuite provides everything most startups and small businesses need to manage customer relationships effectively.</p>
           </div>
         {/if}
       </div>
@@ -681,14 +681,14 @@
           aria-expanded={activeFaq === 2}
         >
           <div class="flex justify-between items-center">
-            <h3 class="text-lg font-semibold text-gray-900 pr-4">Can I self-host BottleCRM on my own servers?</h3>
+            <h3 class="text-lg font-semibold text-gray-900 pr-4">Can I self-host BMSuite on my own servers?</h3>
             <ChevronDown class="w-5 h-5 text-gray-500 transform transition-transform duration-200 {activeFaq === 2 ? 'rotate-180' : ''}" />
           </div>
         </button>
         
         {#if activeFaq === 2}
           <div transition:fade="{{ duration: 200 }}" class="px-6 pb-5">
-            <p class="text-gray-700 leading-relaxed">Absolutely! BottleCRM is designed to be self-hosted. You have complete control over your data and can deploy it on your own servers, cloud infrastructure, or local environment. This ensures data privacy and eliminates vendor lock-in.</p>
+            <p class="text-gray-700 leading-relaxed">Absolutely! BMSuite is designed to be self-hosted. You have complete control over your data and can deploy it on your own servers, cloud infrastructure, or local environment. This ensures data privacy and eliminates vendor lock-in.</p>
           </div>
         {/if}
       </div>
@@ -700,14 +700,14 @@
           aria-expanded={activeFaq === 3}
         >
           <div class="flex justify-between items-center">
-            <h3 class="text-lg font-semibold text-gray-900 pr-4">What technology stack does BottleCRM use?</h3>
+            <h3 class="text-lg font-semibold text-gray-900 pr-4">What technology stack does BMSuite use?</h3>
             <ChevronDown class="w-5 h-5 text-gray-500 transform transition-transform duration-200 {activeFaq === 3 ? 'rotate-180' : ''}" />
           </div>
         </button>
         
         {#if activeFaq === 3}
           <div transition:fade="{{ duration: 200 }}" class="px-6 pb-5">
-            <p class="text-gray-700 leading-relaxed">BottleCRM is built with modern web technologies: SvelteKit 2.21.x for the frontend, Prisma for database management, TailwindCSS for styling, and includes integration capabilities with various third-party services.</p>
+            <p class="text-gray-700 leading-relaxed">BMSuite is built with modern web technologies: SvelteKit 2.21.x for the frontend, Prisma for database management, TailwindCSS for styling, and includes integration capabilities with various third-party services.</p>
           </div>
         {/if}
       </div>
@@ -719,14 +719,14 @@
           aria-expanded={activeFaq === 4}
         >
           <div class="flex justify-between items-center">
-            <h3 class="text-lg font-semibold text-gray-900 pr-4">Do you provide support for BottleCRM implementation?</h3>
+            <h3 class="text-lg font-semibold text-gray-900 pr-4">Do you provide support for BMSuite implementation?</h3>
             <ChevronDown class="w-5 h-5 text-gray-500 transform transition-transform duration-200 {activeFaq === 4 ? 'rotate-180' : ''}" />
           </div>
         </button>
         
         {#if activeFaq === 4}
           <div transition:fade="{{ duration: 200 }}" class="px-6 pb-5">
-            <p class="text-gray-700 leading-relaxed">Yes! While the software is free, we offer paid professional services including hosting setup, custom development, data migration, training, and ongoing technical support to help you get the most out of BottleCRM.</p>
+            <p class="text-gray-700 leading-relaxed">Yes! While the software is free, we offer paid professional services including hosting setup, custom development, data migration, training, and ongoing technical support to help you get the most out of BMSuite.</p>
           </div>
         {/if}
       </div>
@@ -738,14 +738,14 @@
           aria-expanded={activeFaq === 5}
         >
           <div class="flex justify-between items-center">
-            <h3 class="text-lg font-semibold text-gray-900 pr-4">Is BottleCRM suitable for my industry?</h3>
+            <h3 class="text-lg font-semibold text-gray-900 pr-4">Is BMSuite suitable for my industry?</h3>
             <ChevronDown class="w-5 h-5 text-gray-500 transform transition-transform duration-200 {activeFaq === 5 ? 'rotate-180' : ''}" />
           </div>
         </button>
         
         {#if activeFaq === 5}
           <div transition:fade="{{ duration: 200 }}" class="px-6 pb-5">
-            <p class="text-gray-700 leading-relaxed">BottleCRM is industry-agnostic and works well for most businesses including SaaS startups, consulting firms, e-commerce businesses, real estate agencies, and service-based companies. Its customizable nature allows adaptation to various industry-specific needs.</p>
+            <p class="text-gray-700 leading-relaxed">BMSuite is industry-agnostic and works well for most businesses including SaaS startups, consulting firms, e-commerce businesses, real estate agencies, and service-based companies. Its customizable nature allows adaptation to various industry-specific needs.</p>
           </div>
         {/if}
       </div>
@@ -762,7 +762,7 @@
           100% Free & Open Source CRM Software
         </h2>
         <p class="text-xl text-gray-700 mb-8 leading-relaxed"> 
-          BottleCRM is completely free, open-source CRM software hosted on GitHub. Download, customize, self-host, and contribute to the project without any licensing restrictions. Perfect for startups seeking a cost-effective CRM alternative to expensive subscription-based solutions.
+          BMSuite is completely free, open-source CRM software hosted on GitHub. Download, customize, self-host, and contribute to the project without any licensing restrictions. Perfect for startups seeking a cost-effective CRM alternative to expensive subscription-based solutions.
         </p>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
@@ -822,7 +822,7 @@
           </div>
           
           <div class="bg-gray-900 rounded-lg p-4 text-sm font-mono text-green-400 overflow-x-auto">
-            <div class="mb-2 whitespace-nowrap"># Clone and install BottleCRM</div>
+            <div class="mb-2 whitespace-nowrap"># Clone and install BMSuite</div>
             <div class="text-gray-300 whitespace-nowrap">$ git clone https://github.com/MicroPyramid/opensource-startup-crm.git</div>
             <div class="text-gray-300 whitespace-nowrap">$ cd opensource-startup-crm</div>
             <div class="text-gray-300 whitespace-nowrap">$ pnpm install && pnpm run dev</div>
@@ -844,7 +844,7 @@
       </h2>
       <p class="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto leading-relaxed">
         Join the growing community of startups and small businesses who are ditching expensive CRM subscriptions. 
-        Start managing customer relationships more effectively today with BottleCRM - completely free, forever.
+        Start managing customer relationships more effectively today with BMSuite - completely free, forever.
       </p>
       
       <!-- Savings calculator -->
@@ -892,7 +892,7 @@
             Trusted by a Growing Global Community
         </h2>
         <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            BottleCRM is empowering startups and small businesses worldwide to build better customer relationships without breaking the bank.
+            BMSuite is empowering startups and small businesses worldwide to build better customer relationships without breaking the bank.
         </p>
     </div>
     

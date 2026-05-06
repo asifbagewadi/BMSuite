@@ -27,10 +27,26 @@
 	let { 
 		drawerHidden = $bindable(false),
 		user = {},
-		org_name = 'BottleCRM'
+		org_name = 'BMSuite'
 	} = $props();
 
+	function getInitials(/** @type {string} */ name) {
+		if (!name) return 'U';
+		return name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2);
+	}
+
 	let isDark = $state(false);
+
+	$effect(() => {
+		const theme = localStorage.getItem('theme');
+		if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+			isDark = true;
+			document.documentElement.classList.add('dark');
+		} else {
+			isDark = false;
+			document.documentElement.classList.remove('dark');
+		}
+	});
 	let userDropdownOpen = $state(false);
 	let dropdownRef = $state();
 
@@ -40,7 +56,13 @@
 
 	const toggleDarkMode = () => {
 		isDark = !isDark;
-		document.documentElement.classList.toggle('dark');
+		if (isDark) {
+			document.documentElement.classList.add('dark');
+			localStorage.setItem('theme', 'dark');
+		} else {
+			document.documentElement.classList.remove('dark');
+			localStorage.setItem('theme', 'light');
+		}
 	};
 
 	const toggleUserDropdown = () => {
@@ -175,7 +197,7 @@
 		<!-- Header section with logo and mobile close button -->
 		<div class="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
 			<a href="/app" class="flex items-center gap-3">
-				<img src={imgLogo} class="h-8 w-auto" alt="BottleCRM Logo" />
+				<img src={imgLogo} class="h-8 w-auto" alt="BMSuite Logo" />
 				<span class="text-xl font-bold text-gray-900 dark:text-white tracking-tight">
 					{org_name}
 				</span>
@@ -246,7 +268,13 @@
 		<!-- settings section -->
 		<div class="p-4 border-t border-gray-200 dark:border-gray-700" bind:this={dropdownRef}>
 			<div class="flex items-center gap-3 mb-3">
-				<img class="w-10 h-10 rounded-lg object-cover" src={user.profilePhoto} alt="User avatar" />
+				{#if user.profilePhoto}
+					<img class="w-10 h-10 rounded-lg object-cover border border-gray-200 dark:border-gray-700" src={user.profilePhoto} alt="User avatar" />
+				{:else}
+					<div class="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-sm shadow-sm border border-white dark:border-gray-800">
+						{getInitials(user.name)}
+					</div>
+				{/if}
 				<div class="flex-1 min-w-0">
 					<div class="text-sm font-medium text-gray-900 dark:text-white truncate">{user.name}</div>
 					<div class="text-xs text-gray-500 dark:text-gray-400 truncate">{user.email}</div>

@@ -87,7 +87,7 @@
   }
 </script>
 
-<div class="max-w-5xl mx-auto mt-10 p-8 bg-white rounded-lg shadow">
+<div class="max-w-5xl mx-auto mt-10 p-8 bg-white dark:bg-gray-800 rounded-lg shadow">
   <h1 class="text-2xl font-bold mb-6">Edit Blog</h1>
   <form method="POST" action="?/update-blog" class="space-y-5">
     <input type="hidden" name="title" value={editable_title} />
@@ -282,7 +282,7 @@
             </div>
           </div>
           <pre
-            class="mt-2 bg-white p-2 rounded text-sm overflow-x-auto">{block.content}</pre>
+            class="mt-2 bg-white dark:bg-gray-800 p-2 rounded text-sm overflow-x-auto">{block.content}</pre>
         {/if}
       </li>
     {/each}

@@ -82,7 +82,7 @@
   <link rel="canonical" href="https://bottlecrm.io{page.url.pathname}" />
   
   <!-- Enhanced Open Graph -->
-  <meta property="og:site_name" content="BottleCRM" />
+  <meta property="og:site_name" content="BMSuite" />
   <meta property="og:locale" content="en_US" />
   
   <!-- Enhanced Twitter Cards -->
@@ -101,12 +101,12 @@
       <div class="flex justify-between items-center h-16">
         <!-- Logo Section -->
         <div class="flex items-center flex-shrink-0">
-          <a href="/" class="flex items-center group" aria-label="BottleCRM Homepage">
+          <a href="/" class="flex items-center group" aria-label="BMSuite Homepage">
             <div class="relative">
-              <img src={logo} alt="BottleCRM Logo" class="h-7 w-7 sm:h-8 sm:w-8 group-hover:opacity-90 transition-opacity duration-200" />
+              <img src={logo} alt="BMSuite Logo" class="h-7 w-7 sm:h-8 sm:w-8 group-hover:opacity-90 transition-opacity duration-200" />
               <div class="absolute -top-1 -right-1 w-2.5 h-2.5 sm:w-3 sm:h-3 bg-green-500 rounded-full animate-pulse"></div>
             </div>
-            <span class="ml-2 text-lg sm:text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-200">BottleCRM</span>
+            <span class="ml-2 text-lg sm:text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-200">BMSuite</span>
             <span class="hidden xs:block ml-2 text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full font-medium">FREE</span>
           </a>
         </div>
@@ -115,14 +115,14 @@
         <div class="hidden xl:flex items-center space-x-1">
           <a href="/features" class="px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200">Features</a>
           <a href="/pricing" class="px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200">Pricing</a>
-          <a href="https://www.youtube.com/@bottlecrm" class="px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200">Live Demo</a>
+          <a href="https://www.youtube.com/@BMSuite" class="px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200">Live Demo</a>
           <a href="/blog" class="px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200">Blog</a>
           <a href="/contact" class="px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200">Support</a>
           
           <!-- GitHub Star Button -->
           <a href="https://github.com/MicroPyramid/opensource-startup-crm" target="_blank" rel="noopener noreferrer" 
              class="inline-flex items-center px-3 py-2 text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors duration-200"
-             aria-label="Star BottleCRM on GitHub">
+             aria-label="Star BMSuite on GitHub">
             <Github class="w-4 h-4 mr-1" />
           </a>
           
@@ -130,16 +130,15 @@
           
           <a href="/login" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200">Login</a>
           <a href="/login" class="inline-flex items-center px-4 lg:px-6 py-2.5 rounded-lg text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200">
-            Start Free
+            Get Started
             <ArrowRight class="ml-2 w-4 h-4" />
           </a>
         </div>
         
         <!-- Tablet Navigation - Shows limited items -->
         <div class="hidden lg:flex xl:hidden items-center space-x-2">
-          <a href="https://www.youtube.com/@bottlecrm" class="px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200">Demo</a>
+          <a href="https://www.youtube.com/@BMSuite" class="px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200">Demo</a>
           <a href="/login" class="px-3 py-2 rounded-lg text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200">Login</a>
-          <a href="/signup" class="px-4 py-2 rounded-lg text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-200">Sign Up</a>
           
           <button onclick={toggleMenu} 
                   class="ml-2 inline-flex items-center justify-center p-2 rounded-lg text-gray-500 hover:text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200"
@@ -192,7 +191,7 @@
               <span class="flex-1">Pricing</span>
               <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full font-medium">Free</span>
             </a>
-            <a href="https://www.youtube.com/@bottlecrm" class="flex items-center px-4 py-3 rounded-xl text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 active:bg-blue-100 transition-all duration-200">
+            <a href="https://www.youtube.com/@BMSuite" class="flex items-center px-4 py-3 rounded-xl text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 active:bg-blue-100 transition-all duration-200">
               <Video class="w-5 h-5 mr-3 text-purple-500" />
               Live Demo
             </a>
@@ -216,13 +215,9 @@
             </a>
           </div>
           
-          <!-- Mobile Auth Buttons -->
           <div class="pt-4 border-t border-gray-200 space-y-3 sm:hidden">
-            <a href="/login" class="block w-full text-center px-4 py-3 rounded-xl text-base font-medium text-gray-700 border-2 border-gray-300 hover:bg-gray-50 active:bg-gray-100 transition-all duration-200">
-              Sign In
-            </a>
-            <a href="/signup" class="block w-full text-center px-4 py-3 rounded-xl text-base font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 active:from-blue-800 active:to-blue-900 shadow-lg transition-all duration-200">
-              Start Free Trial
+            <a href="/login" class="block w-full text-center px-4 py-3 rounded-xl text-base font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 active:from-blue-800 active:to-blue-900 shadow-lg transition-all duration-200">
+              Sign In to Account
             </a>
           </div>
         </div>
@@ -241,7 +236,7 @@
       <!-- Newsletter signup -->
       <div class="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 mb-12">
         <div class="text-center">
-          <h3 class="text-2xl font-bold text-white mb-4">Stay Updated with BottleCRM</h3>
+          <h3 class="text-2xl font-bold text-white mb-4">Stay Updated with BMSuite</h3>
           <p class="text-blue-100 mb-6 max-w-2xl mx-auto">Get the latest updates on new features, best practices, and CRM tips delivered to your inbox.</p>
           <form 
             method="POST" 
@@ -296,8 +291,8 @@
         <!-- Company Info -->
         <div class="lg:col-span-2">
           <div class="flex items-center mb-4">
-            <img src={logo} alt="BottleCRM Logo" class="h-8 w-8 mr-3" />
-            <span class="text-xl font-bold text-white">BottleCRM</span>
+            <img src={logo} alt="BMSuite Logo" class="h-8 w-8 mr-3" />
+            <span class="text-xl font-bold text-white">BMSuite</span>
           </div>
           <p class="text-gray-400 mb-6 leading-relaxed">The only CRM you'll ever need - completely free, open-source, and designed for startups. Build better customer relationships without breaking the bank.</p>
           
@@ -387,7 +382,7 @@
       <div class="mt-12 pt-8 border-t border-gray-800">
         <div class="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
           <div class="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6">
-            <p class="text-sm text-gray-400">© {new Date().getFullYear()} BottleCRM by <a href="https://micropyramid.com" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300">MicroPyramid</a>. Open Source & Free Forever.</p>
+            <p class="text-sm text-gray-400">© {new Date().getFullYear()} BMSuite by <a href="https://micropyramid.com" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300">MicroPyramid</a>. Open Source & Free Forever.</p>
             <div class="flex space-x-4 text-sm">
               <a href="/privacy-policy" class="text-gray-400 hover:text-white transition-colors duration-200">Privacy</a>
               <a href="/terms-of-service" class="text-gray-400 hover:text-white transition-colors duration-200">Terms</a>

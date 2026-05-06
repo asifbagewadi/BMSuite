@@ -53,22 +53,22 @@
 </script>
 
 <svelte:head>
-  <title>Migrate to BottleCRM – Free CRM Migration Tools & Service</title>
-  <meta name="description" content="Migrate from Salesforce, HubSpot, Pipedrive, and more to BottleCRM. Free CRM migration tools, expert support, and zero subscription fees. Own your CRM data." />
+  <title>Migrate to BMSuite – Free CRM Migration Tools & Service</title>
+  <meta name="description" content="Migrate from Salesforce, HubSpot, Pipedrive, and more to BMSuite. Free CRM migration tools, expert support, and zero subscription fees. Own your CRM data." />
   <meta name="keywords" content="crm migration, migrate crm, crm data migration, free crm migration, open source crm, salesforce migration, hubspot migration, pipedrive migration, crm import, crm export, crm migration service" />
   <link rel="canonical" href="https://bottlecrm.io/migration" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Migrate to BottleCRM – Free CRM Migration Tools & Service" />
-  <meta property="og:description" content="Switch from Salesforce, HubSpot, Pipedrive, and more to BottleCRM. Free migration tools, expert support, and zero subscription fees." />
+  <meta property="og:title" content="Migrate to BMSuite – Free CRM Migration Tools & Service" />
+  <meta property="og:description" content="Switch from Salesforce, HubSpot, Pipedrive, and more to BMSuite. Free migration tools, expert support, and zero subscription fees." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bottlecrm.io/migration" />
   <meta property="og:image" content="https://bottlecrm.io/og-image.png" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Migrate to BottleCRM – Free CRM Migration Tools & Service" />
-  <meta name="twitter:description" content="Migrate from Salesforce, HubSpot, Pipedrive, and more to BottleCRM. Free CRM migration tools, expert support, and zero subscription fees." />
+  <meta name="twitter:title" content="Migrate to BMSuite – Free CRM Migration Tools & Service" />
+  <meta name="twitter:description" content="Migrate from Salesforce, HubSpot, Pipedrive, and more to BMSuite. Free CRM migration tools, expert support, and zero subscription fees." />
   <meta name="twitter:image" content="https://bottlecrm.io/og-image.png" />
 
   <!-- Structured Data (JSON-LD) -->
@@ -77,11 +77,11 @@
       {
         "@context": "https://schema.org",
         "@type": "Service",
-        "name": "CRM Migration to BottleCRM",
-        "description": "Professional CRM migration services and free tools to move from Salesforce, HubSpot, Pipedrive, and other platforms to BottleCRM. Preserve your data and eliminate subscription costs.",
+        "name": "CRM Migration to BMSuite",
+        "description": "Professional CRM migration services and free tools to move from Salesforce, HubSpot, Pipedrive, and other platforms to BMSuite. Preserve your data and eliminate subscription costs.",
         "provider": {
           "@type": "Organization",
-          "name": "BottleCRM",
+          "name": "BMSuite",
           "url": "https://bottlecrm.io"
         },
         "areaServed": "Worldwide",
@@ -106,7 +106,7 @@
       </h1>
       
       <p class="text-xl md:text-2xl text-blue-100 mb-8 leading-relaxed">
-        Migrate from expensive subscription-based CRM platforms to BottleCRM. 
+        Migrate from expensive subscription-based CRM platforms to BMSuite. 
         Keep all your data, gain complete control, and eliminate monthly fees forever.
       </p>
       
@@ -461,7 +461,7 @@
         </div>
       </div>
 
-      <!-- Plan Your BottleCRM Setup -->
+      <!-- Plan Your BMSuite Setup -->
       <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-100">
         <div class="flex flex-col lg:flex-row lg:items-center lg:space-x-8">
           <div class="lg:w-1/3 mb-6 lg:mb-0">
@@ -470,11 +470,11 @@
                 <Settings class="h-6 w-6 text-blue-600" />
               </div>
               <div>
-                <h3 class="text-xl font-bold text-gray-900">Plan Your BottleCRM Setup</h3>
+                <h3 class="text-xl font-bold text-gray-900">Plan Your BMSuite Setup</h3>
                 <p class="text-sm text-blue-600 font-medium">Estimated time: 1 day</p>
               </div>
             </div>
-            <p class="text-gray-600">Configure BottleCRM to match your business needs</p>
+            <p class="text-gray-600">Configure BMSuite to match your business needs</p>
           </div>
           
           <div class="lg:w-2/3">
@@ -561,7 +561,7 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
       <h2 class="text-4xl font-extrabold text-gray-900 mb-6">
-        Why Choose BottleCRM?
+        Why Choose BMSuite?
       </h2>
       <p class="text-xl text-gray-600">
         Experience the freedom of open-source CRM with enterprise-level features.
@@ -695,7 +695,7 @@
         Migration Questions & Answers
       </h2>
       <p class="text-xl text-gray-600">
-        Everything you need to know about migrating to BottleCRM.
+        Everything you need to know about migrating to BMSuite.
       </p>
     </div>
 
@@ -735,7 +735,7 @@
         
         {#if activeFaq === 1}
           <div transition:fade="{{ duration: 200 }}" class="px-6 pb-5">
-            <p class="text-gray-700 leading-relaxed">BottleCRM migration tools are designed to preserve all your important data. We recommend keeping backups of your original data and testing with sample data first. Our professional migration service includes data integrity verification.</p>
+            <p class="text-gray-700 leading-relaxed">BMSuite migration tools are designed to preserve all your important data. We recommend keeping backups of your original data and testing with sample data first. Our professional migration service includes data integrity verification.</p>
           </div>
         {/if}
       </div>
@@ -775,7 +775,7 @@
         
         {#if activeFaq === 3}
           <div transition:fade="{{ duration: 200 }}" class="px-6 pb-5">
-            <p class="text-gray-700 leading-relaxed">Yes! Our professional migration service includes custom field mapping, workflow recreation, and business process migration. We ensure your BottleCRM setup matches your current business needs.</p>
+            <p class="text-gray-700 leading-relaxed">Yes! Our professional migration service includes custom field mapping, workflow recreation, and business process migration. We ensure your BMSuite setup matches your current business needs.</p>
           </div>
         {/if}
       </div>
@@ -795,7 +795,7 @@
         
         {#if activeFaq === 4}
           <div transition:fade="{{ duration: 200 }}" class="px-6 pb-5">
-            <p class="text-gray-700 leading-relaxed">BottleCRM supports custom workflows and automation. Our migration service includes analyzing your current workflows and recreating them in BottleCRM, often with improvements and optimizations.</p>
+            <p class="text-gray-700 leading-relaxed">BMSuite supports custom workflows and automation. Our migration service includes analyzing your current workflows and recreating them in BMSuite, often with improvements and optimizations.</p>
           </div>
         {/if}
       </div>
@@ -830,14 +830,14 @@
       Ready to Own Your CRM Data?
     </h2>
     <p class="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-      Start preparing for your migration today. Download BottleCRM, explore the features, 
+      Start preparing for your migration today. Download BMSuite, explore the features, 
       and experience the freedom of open-source CRM.
     </p>
     
     <div class="flex flex-col sm:flex-row sm:justify-center space-y-4 sm:space-y-0 sm:space-x-6">
       <a href="https://github.com/MicroPyramid/opensource-startup-crm" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-xl text-blue-700 bg-white hover:bg-gray-100 shadow-2xl transition-all duration-200 hover:scale-105">
         <Github class="w-6 h-6 mr-3" />
-        Download BottleCRM
+        Download BMSuite
       </a>
       <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-xl text-white border-2 border-white hover:bg-white/10 transition-all duration-200">
         <MessageCircle class="w-6 h-6 mr-3" />

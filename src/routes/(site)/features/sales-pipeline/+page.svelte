@@ -76,7 +76,7 @@
   const schema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "BottleCRM",
+    "name": "BMSuite",
     "image": "https://bottlecrm.io/logo.png",
     "url": "https://bottlecrm.io/features/sales-pipeline",
     "applicationCategory": "BusinessApplication",
@@ -89,19 +89,19 @@
     "description": "Free open-source CRM with visual sales pipeline management, deal tracking, sales forecasting, and workflow automation.",
     "publisher": {
       "@type": "Organization",
-      "name": "BottleCRM"
+      "name": "BMSuite"
     }
   };
 </script>
 
 <svelte:head>
   <title>Free Sales Pipeline CRM | Visual Deal Tracking & Forecasting</title>
-  <meta name="description" content="Free CRM with visual sales pipeline, deal tracking, sales forecasting & automation. Boost conversions with BottleCRM's open-source pipeline management." />
+  <meta name="description" content="Free CRM with visual sales pipeline, deal tracking, sales forecasting & automation. Boost conversions with BMSuite's open-source pipeline management." />
   <link rel="canonical" href="https://bottlecrm.io/features/sales-pipeline" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Free Sales Pipeline CRM | Visual Deal Tracking" />
-  <meta property="og:description" content="Open-source CRM for sales pipeline management, deal tracking, and forecasting. Try BottleCRM free." />
+  <meta property="og:description" content="Open-source CRM for sales pipeline management, deal tracking, and forecasting. Try BMSuite free." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bottlecrm.io/features/sales-pipeline" />
   <meta property="og:image" content="https://bottlecrm.io/logo.png" />
@@ -109,7 +109,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Free Sales Pipeline CRM | Visual Deal Tracking" />
-  <meta name="twitter:description" content="Open-source CRM for sales pipeline management, deal tracking, and forecasting. Try BottleCRM free." />
+  <meta name="twitter:description" content="Open-source CRM for sales pipeline management, deal tracking, and forecasting. Try BMSuite free." />
   <meta name="twitter:image" content="https://bottlecrm.io/logo.png" />
 
   <!-- Schema.org JSON-LD -->
@@ -133,7 +133,7 @@
       </h1>
       
       <p class="text-xl md:text-2xl mb-8 text-blue-100 leading-relaxed">
-        Transform your sales workflow with BottleCRM's intuitive visual pipeline. Track deals from first contact to closed-won, forecast revenue accurately, and automate your sales process for maximum efficiency.
+        Transform your sales workflow with BMSuite's intuitive visual pipeline. Track deals from first contact to closed-won, forecast revenue accurately, and automate your sales process for maximum efficiency.
       </p>
       
       <!-- Value proposition points -->
@@ -257,7 +257,7 @@
         Interactive Sales Pipeline Demo
       </h2>
       <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-        Experience how BottleCRM's visual pipeline makes deal management intuitive and efficient. Drag deals between stages and watch your sales process come to life.
+        Experience how BMSuite's visual pipeline makes deal management intuitive and efficient. Drag deals between stages and watch your sales process come to life.
       </p>
     </div>
 
@@ -1047,7 +1047,7 @@
       Ready to Transform Your Sales Process?
     </h2>
     <p class="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-      Start using BottleCRM today and experience the power of visual sales pipeline management. Join the community building the future of free CRM software.
+      Start using BMSuite today and experience the power of visual sales pipeline management. Join the community building the future of free CRM software.
     </p>
     
     <div class="flex flex-col sm:flex-row sm:justify-center space-y-4 sm:space-y-0 sm:space-x-6">

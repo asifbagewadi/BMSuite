@@ -10,7 +10,7 @@
       + New Blog
     </a>
   </div>
-  <table class="min-w-full bg-white border border-gray-200 rounded-lg shadow">
+  <table class="min-w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow">
     <thead>
       <tr class="bg-gray-100">
         <th class="py-2 px-4 border-b text-left">Title</th>

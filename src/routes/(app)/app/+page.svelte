@@ -48,7 +48,7 @@
 </script>
 
 <svelte:head>
-    <title>Dashboard - BottleCRM</title>
+    <title>Dashboard - BMSuite</title>
 </svelte:head>
 
 <div class="p-6 space-y-6">

@@ -47,12 +47,12 @@
 
 <svelte:head>
   <title>Free Account Management CRM | Unlimited Contacts & Customer Database</title>
-  <meta name="description" content="Manage unlimited customer accounts and contacts with BottleCRM. Free, open-source CRM for businesses to centralize data, track interactions, and grow relationships." />
+  <meta name="description" content="Manage unlimited customer accounts and contacts with BMSuite. Free, open-source CRM for businesses to centralize data, track interactions, and grow relationships." />
   <meta name="keywords" content="free crm, account management, contact management, customer database, open source crm, unlimited contacts, client management software, business crm" />
   
   <!-- Open Graph -->
   <meta property="og:title" content="Free Account Management CRM | Unlimited Contacts & Customer Database" />
-  <meta property="og:description" content="BottleCRM offers free, unlimited account and contact management. Centralize customer data, track interactions, and grow your business relationships." />
+  <meta property="og:description" content="BMSuite offers free, unlimited account and contact management. Centralize customer data, track interactions, and grow your business relationships." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bottlecrm.io/features/account-management" />
 
@@ -62,7 +62,7 @@
       {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
-        "name": "BottleCRM",
+        "name": "BMSuite",
         "applicationCategory": "Customer Relationship Management",
         "operatingSystem": "Web",
         "offers": {
@@ -70,11 +70,11 @@
           "price": "0",
           "priceCurrency": "USD"
         },
-        "description": "BottleCRM is a free, open-source CRM application for unlimited account and contact management. Centralize customer data, track interactions, and manage your business relationships efficiently.",
+        "description": "BMSuite is a free, open-source CRM application for unlimited account and contact management. Centralize customer data, track interactions, and manage your business relationships efficiently.",
         "url": "https://bottlecrm.io/features/account-management",
         "publisher": {
           "@type": "Organization",
-          "name": "BottleCRM"
+          "name": "BMSuite"
         }
       }
     `}
@@ -94,7 +94,7 @@
       </div>
       
       <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
-        Master Customer <span class="text-yellow-300">Account Management</span> with BottleCRM
+        Master Customer <span class="text-yellow-300">Account Management</span> with BMSuite
       </h1>
       
       <p class="text-xl md:text-2xl mb-8 text-blue-100 leading-relaxed">
@@ -589,7 +589,7 @@
         Benefits for Every Team
       </h2>
       <p class="text-xl text-gray-600">
-        See how different teams can leverage BottleCRM's account management features.
+        See how different teams can leverage BMSuite's account management features.
       </p>
     </div>
 
@@ -737,7 +737,7 @@
         Implementation Roadmap
       </h2>
       <p class="text-xl text-gray-600">
-        Get started with BottleCRM account management in three simple steps.
+        Get started with BMSuite account management in three simple steps.
       </p>
     </div>
 
@@ -849,7 +849,7 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
       <h2 class="text-4xl font-extrabold text-gray-900 sm:text-5xl mb-6">
-        Why Choose BottleCRM for Account Management?
+        Why Choose BMSuite for Account Management?
       </h2>
       <p class="text-xl text-gray-600">
         Compare our account management features with traditional CRM solutions.
@@ -862,7 +862,7 @@
           <thead class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
             <tr>
               <th class="px-6 py-4 text-left text-sm font-semibold">Feature</th>
-              <th class="px-6 py-4 text-center text-sm font-semibold">BottleCRM</th>
+              <th class="px-6 py-4 text-center text-sm font-semibold">BMSuite</th>
               <th class="px-6 py-4 text-center text-sm font-semibold">Enterprise CRM A</th>
               <th class="px-6 py-4 text-center text-sm font-semibold">Popular CRM B</th>
               <th class="px-6 py-4 text-center text-sm font-semibold">Commercial CRM C</th>
@@ -928,7 +928,7 @@
       Ready to Transform Your Account Management?
     </h2>
     <p class="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-      Start managing unlimited contacts and accounts today with BottleCRM's comprehensive, free account management system.
+      Start managing unlimited contacts and accounts today with BMSuite's comprehensive, free account management system.
     </p>
     
     <div class="flex flex-col sm:flex-row sm:justify-center space-y-4 sm:space-y-0 sm:space-x-6">

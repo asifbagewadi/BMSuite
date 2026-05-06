@@ -44,6 +44,7 @@ model User {
   BoardTaskActivity BoardTaskActivity[]
   BlogPost          BlogPost[]
   jwtTokens         JwtToken[]
+  password          String?
 }
 
 model JwtToken {

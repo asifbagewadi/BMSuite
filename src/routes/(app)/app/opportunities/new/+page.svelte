@@ -78,7 +78,7 @@
 </script>
 
 <svelte:head>
-    <title>New Opportunity - BottleCRM</title>
+    <title>New Opportunity - BMSuite</title>
 </svelte:head>
 
 <div class="min-h-screen bg-gray-50 dark:bg-gray-900">

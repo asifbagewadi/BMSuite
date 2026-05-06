@@ -39,44 +39,44 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Header -->
     <div class="mb-8">
-      <h1 class="text-3xl font-bold text-gray-900 mb-2">Newsletter Management</h1>
-      <p class="text-gray-600">Manage and view newsletter subscribers</p>
+      <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-2">Newsletter Management</h1>
+      <p class="text-gray-600 dark:text-gray-400">Manage and view newsletter subscribers</p>
     </div>
     
     <!-- Stats Cards -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-      <div class="bg-white rounded-lg shadow p-6">
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
         <div class="flex items-center">
           <div class="flex-shrink-0">
             <Users class="h-8 w-8 text-blue-600" />
           </div>
           <div class="ml-4">
             <p class="text-sm font-medium text-gray-500">Total Subscribers</p>
-            <p class="text-2xl font-bold text-gray-900">{data.totalCount}</p>
+            <p class="text-2xl font-bold text-gray-900 dark:text-white">{data.totalCount}</p>
           </div>
         </div>
       </div>
       
-      <div class="bg-white rounded-lg shadow p-6">
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
         <div class="flex items-center">
           <div class="flex-shrink-0">
             <UserCheck class="h-8 w-8 text-green-600" />
           </div>
           <div class="ml-4">
             <p class="text-sm font-medium text-gray-500">Active Subscribers</p>
-            <p class="text-2xl font-bold text-gray-900">{data.activeCount}</p>
+            <p class="text-2xl font-bold text-gray-900 dark:text-white">{data.activeCount}</p>
           </div>
         </div>
       </div>
       
-      <div class="bg-white rounded-lg shadow p-6">
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
         <div class="flex items-center">
           <div class="flex-shrink-0">
             <TrendingUp class="h-8 w-8 text-purple-600" />
           </div>
           <div class="ml-4">
             <p class="text-sm font-medium text-gray-500">Active Rate</p>
-            <p class="text-2xl font-bold text-gray-900">
+            <p class="text-2xl font-bold text-gray-900 dark:text-white">
               {data.totalCount > 0 ? Math.round((data.activeCount / data.totalCount) * 100) : 0}%
             </p>
           </div>
@@ -91,9 +91,9 @@
     {/if}
     
     <!-- Subscribers Table -->
-    <div class="bg-white shadow rounded-lg overflow-hidden">
-      <div class="px-6 py-4 border-b border-gray-200">
-        <h2 class="text-lg font-medium text-gray-900 flex items-center">
+    <div class="bg-white dark:bg-gray-800 shadow rounded-lg overflow-hidden">
+      <div class="px-6 py-4 border-b border-gray-200 dark:border-gray-700">
+        <h2 class="text-lg font-medium text-gray-900 dark:text-white flex items-center">
           <Mail class="h-5 w-5 mr-2" />
           Newsletter Subscribers
         </h2>
@@ -102,7 +102,7 @@
       {#if data.subscribers.length === 0}
         <div class="text-center py-12">
           <Mail class="mx-auto h-12 w-12 text-gray-400" />
-          <h3 class="mt-2 text-sm font-medium text-gray-900">No subscribers yet</h3>
+          <h3 class="mt-2 text-sm font-medium text-gray-900 dark:text-white">No subscribers yet</h3>
           <p class="mt-1 text-sm text-gray-500">Get started by promoting your newsletter.</p>
         </div>
       {:else}
@@ -127,11 +127,11 @@
                 </th>
               </tr>
             </thead>
-            <tbody class="bg-white divide-y divide-gray-200">
+            <tbody class="bg-white dark:bg-gray-800 divide-y divide-gray-200">
               {#each data.subscribers as subscriber}
                 <tr class="hover:bg-gray-50">
                   <td class="px-6 py-4 whitespace-nowrap">
-                    <div class="text-sm font-medium text-gray-900">{subscriber.email}</div>
+                    <div class="text-sm font-medium text-gray-900 dark:text-white">{subscriber.email}</div>
                   </td>
                   <td class="px-6 py-4 whitespace-nowrap">
                     <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium {getStatusClass(subscriber.isActive, subscriber.isConfirmed)}">

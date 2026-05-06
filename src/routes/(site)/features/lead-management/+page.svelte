@@ -55,7 +55,7 @@
   const schema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "BottleCRM Lead Management",
+    "name": "BMSuite Lead Management",
     "url": "https://bottlecrm.io/features/lead-management",
     "applicationCategory": "CRM Application",
     "operatingSystem": "All",
@@ -68,20 +68,20 @@
     "description": "Free, open-source CRM lead management software for startups and small businesses. Capture, score, nurture, and convert leads with automated workflows.",
     "publisher": {
       "@type": "Organization",
-      "name": "BottleCRM"
+      "name": "BMSuite"
     }
   };
 </script>
 
 <svelte:head>
-  <title>Free CRM Lead Management Software | BottleCRM</title>
+  <title>Free CRM Lead Management Software | BMSuite</title>
   <meta name="description" content="Free, open-source CRM lead management software for startups & small businesses. Capture, score, nurture & convert leads with automated workflows." />
   <meta name="keywords" content="lead management software, free crm, lead generation, lead nurturing, open source crm, sales crm, lead scoring, crm for startups, crm for small business" />
   <link rel="canonical" href="https://bottlecrm.io/features/lead-management" />
   <meta name="robots" content="index, follow" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Free CRM Lead Management Software | BottleCRM" />
+  <meta property="og:title" content="Free CRM Lead Management Software | BMSuite" />
   <meta property="og:description" content="Free, open-source CRM lead management software for startups & small businesses. Capture, score, nurture & convert leads with automated workflows." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bottlecrm.io/features/lead-management" />
@@ -89,7 +89,7 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Free CRM Lead Management Software | BottleCRM" />
+  <meta name="twitter:title" content="Free CRM Lead Management Software | BMSuite" />
   <meta name="twitter:description" content="Free, open-source CRM lead management software for startups & small businesses. Capture, score, nurture & convert leads with automated workflows." />
   <meta name="twitter:image" content="https://bottlecrm.io/og-lead-management.png" />
 
@@ -113,7 +113,7 @@
       </h1>
       
       <p class="text-xl md:text-2xl mb-8 text-blue-100 leading-relaxed">
-        Capture, score, nurture, and convert leads with BottleCRM's comprehensive lead management system. Stop losing potential customers and start maximizing your sales pipeline.
+        Capture, score, nurture, and convert leads with BMSuite's comprehensive lead management system. Stop losing potential customers and start maximizing your sales pipeline.
       </p>
       
       <!-- Key Benefits -->
@@ -156,7 +156,7 @@
         Complete Lead Management Process
       </h2>
       <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-        From initial capture to final conversion, BottleCRM streamlines every step of your lead management process.
+        From initial capture to final conversion, BMSuite streamlines every step of your lead management process.
       </p>
     </div>
 
@@ -821,7 +821,7 @@
     <div class="lg:flex lg:items-center lg:justify-between lg:space-x-12">
       <div class="lg:w-1/2">
         <h2 class="text-4xl font-extrabold text-gray-900 sm:text-5xl mb-8">
-          Why Choose BottleCRM for Lead Management?
+          Why Choose BMSuite for Lead Management?
         </h2>
         
         <div class="space-y-8">
@@ -918,19 +918,19 @@
         Lead Management FAQs
       </h2>
       <p class="text-xl text-gray-600">
-        Common questions about BottleCRM's lead management capabilities.
+        Common questions about BMSuite's lead management capabilities.
       </p>
     </div>
 
     <div class="space-y-6">
       <div class="bg-gray-50 rounded-xl p-6">
-        <h3 class="text-lg font-semibold text-gray-900 mb-3">How does lead scoring work in BottleCRM?</h3>
-        <p class="text-gray-600">BottleCRM's lead scoring system automatically evaluates leads based on demographic information, behavioral data, and engagement levels. You can customize scoring rules to match your ideal customer profile and business priorities.</p>
+        <h3 class="text-lg font-semibold text-gray-900 mb-3">How does lead scoring work in BMSuite?</h3>
+        <p class="text-gray-600">BMSuite's lead scoring system automatically evaluates leads based on demographic information, behavioral data, and engagement levels. You can customize scoring rules to match your ideal customer profile and business priorities.</p>
       </div>
       
       <div class="bg-gray-50 rounded-xl p-6">
         <h3 class="text-lg font-semibold text-gray-900 mb-3">Can I import leads from other systems?</h3>
-        <p class="text-gray-600">Yes, BottleCRM supports bulk lead import from CSV files, API integrations, and direct migration from other CRM systems. Our duplicate detection ensures clean data integration.</p>
+        <p class="text-gray-600">Yes, BMSuite supports bulk lead import from CSV files, API integrations, and direct migration from other CRM systems. Our duplicate detection ensures clean data integration.</p>
       </div>
       
       <div class="bg-gray-50 rounded-xl p-6">
@@ -953,7 +953,7 @@
       Ready to Transform Your Lead Management?
     </h2>
     <p class="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-      Stop losing leads and start converting more prospects into customers. Try BottleCRM's lead management features today.
+      Stop losing leads and start converting more prospects into customers. Try BMSuite's lead management features today.
     </p>
     
     <div class="flex flex-col sm:flex-row sm:justify-center space-y-4 sm:space-y-0 sm:space-x-6">
