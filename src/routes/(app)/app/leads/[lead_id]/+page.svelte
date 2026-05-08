@@ -36,7 +36,7 @@
 
   export let data;
   export let form;
-  const { lead } = data;
+  $: lead = data.lead;
 
   let newComment = '';
   let isSubmittingComment = false;
@@ -183,8 +183,7 @@
   const enhanceCommentForm = () => {
     isSubmittingComment = true;
     return async (/** @type {{ update: any }} */ { update }) => {
-      await update({ reset: false });
-      // Reset the loading state after update
+      await update();
       isSubmittingComment = false;
     };
   };
@@ -197,7 +196,6 @@
     toastMessage = form.message || 'Action completed successfully!';
     toastType = 'success';
     showToast = true;
-    invalidateAll();
     isConverting = false;
     isSubmittingComment = false;
     if (form.commentAdded) {
@@ -355,9 +353,8 @@
                       </div>
                       <div class="flex-1 min-w-0">
                         <p class="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">Phone</p>
-                        <a href="tel:{lead.phone}" class="text-sm text-gray-900 dark:text-gray-100 hover:text-green-600 dark:hover:text-green-400 transition-colors font-medium">
-                          {lead.phone}
-                        </a>
+                        <!-- Call feature removed -->
+                        <span class="text-sm text-gray-900 dark:text-gray-100 font-medium">{lead.phone}</span>
                       </div>
                       <button onclick={copyPhone} class="opacity-0 group-hover:opacity-100 p-1 hover:bg-white dark:hover:bg-gray-500 rounded-lg transition-all">
                         <Copy class="w-4 h-4 text-gray-400 dark:text-gray-500" />
@@ -377,6 +374,7 @@
                       Send Email
                     </a>
                   {/if}
+                  <!-- Call feature removed
                   {#if lead.phone}
                     <a 
                       href="tel:{lead.phone}"
@@ -386,6 +384,7 @@
                       Call
                     </a>
                   {/if}
+                  -->
                 </div>
               </div>
               

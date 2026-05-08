@@ -127,7 +127,9 @@
           <div class="space-y-2">
             <div class="flex justify-between items-center px-1">
               <label for="password" class="text-sm font-bold text-gray-700 dark:text-gray-300">Password</label>
+              <!-- Forgot password temporarily disabled
               <a href="/forgot-password" class="text-xs font-bold text-blue-600 hover:text-blue-700 dark:text-blue-400 transition-colors">Forgot password?</a>
+              -->
             </div>
             <div class="relative group">
               <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-400 group-focus-within:text-blue-500 transition-colors">
@@ -162,17 +164,12 @@
           </button>
         </form>
 
-        <div class="mt-8 flex items-center gap-4">
-          <div class="h-px flex-1 bg-gray-100 dark:bg-gray-800"></div>
-          <span class="text-gray-400 dark:text-gray-500 text-sm font-medium uppercase tracking-widest">Or continue with</span>
-          <div class="h-px flex-1 bg-gray-100 dark:bg-gray-800"></div>
-        </div>
-
-        <!-- Hidden form for Google Login action -->
-        <form bind:this={formElement} method="POST" action="?/googleLogin" class="hidden">
+        <!-- Hidden form for Google Login action - temporarily disabled -->
+        <!-- <form bind:this={formElement} method="POST" action="?/googleLogin" class="hidden">
           <input type="hidden" name="credential" bind:value={googleCredential} />
-        </form>
+        </form> -->
 
+        <!-- Google login temporarily disabled
         <div class="mt-8">
           {#if data.googleClientId}
             <div id="g_id_onload"
@@ -202,6 +199,7 @@
             </div>
           {/if}
         </div>
+        -->
       </div>
     </div>
   </div>

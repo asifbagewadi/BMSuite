@@ -378,10 +378,11 @@
                           </a>
                         {/if}
                         {#if lead.phone}
-                          <a href="tel:{lead.phone}" class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                          <!-- Call feature removed -->
+                          <span class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300">
                             <Phone class="w-4 h-4 flex-shrink-0" />
                             <span class="whitespace-nowrap">{lead.phone}</span>
-                          </a>
+                          </span>
                         {/if}
                         {#if !lead.email && !lead.phone}
                           <span class="text-gray-400 dark:text-gray-500">-</span>
@@ -508,10 +509,11 @@
                 {/if}
                 
                 {#if lead.phone}
-                  <a href="tel:{lead.phone}" class="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                  <!-- Call feature removed -->
+                  <span class="flex items-center gap-2 text-gray-600 dark:text-gray-300">
                     <Phone class="w-4 h-4 flex-shrink-0" />
                     <span>{lead.phone}</span>
-                  </a>
+                  </span>
                 {/if}
 
                 <div class="flex items-center justify-between text-sm">

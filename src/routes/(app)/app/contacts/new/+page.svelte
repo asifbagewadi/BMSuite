@@ -157,19 +157,23 @@
                     {#if !accountId && data.accounts?.length > 0}
                         <div>
                             <label for="accountSelect" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                                Account (Optional)
+                                Account *
                             </label>
                             <select 
                                 id="accountSelect" 
                                 name="accountId" 
                                 bind:value={formValues.accountId}
-                                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                required
+                                class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 {errors.accountId ? 'border-red-300 dark:border-red-600' : ''}"
                             >
-                                <option value="">Select an account (optional)</option>
+                                <option value="">Select an account</option>
                                 {#each data.accounts as account}
                                     <option value={account.id}>{account.name}</option>
                                 {/each}
                             </select>
+                            {#if errors.accountId}
+                                <p class="mt-1 text-sm text-red-600 dark:text-red-400">{errors.accountId}</p>
+                            {/if}
                         </div>
                     {/if}
 
@@ -185,6 +189,7 @@
                                 name="firstName" 
                                 bind:value={formValues.firstName}
                                 required
+                                maxlength="1000"
                                 class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 {errors.firstName ? 'border-red-300 dark:border-red-600' : ''}"
                                 placeholder="Enter first name"
                             />
@@ -202,6 +207,7 @@
                                 name="lastName" 
                                 bind:value={formValues.lastName}
                                 required
+                                maxlength="1000"
                                 class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 {errors.lastName ? 'border-red-300 dark:border-red-600' : ''}"
                                 placeholder="Enter last name"
                             />
@@ -275,6 +281,7 @@
                                     id="role" 
                                     name="role" 
                                     bind:value={formValues.role}
+                                    maxlength="1000"
                                     class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                                     placeholder="e.g., Decision Maker, Influencer"
                                 />
@@ -315,6 +322,7 @@
                                 id="title" 
                                 name="title" 
                                 bind:value={formValues.title}
+                                maxlength="1000"
                                 class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                                 placeholder="e.g., Sales Manager"
                             />
@@ -328,6 +336,7 @@
                                 id="department" 
                                 name="department" 
                                 bind:value={formValues.department}
+                                maxlength="1000"
                                 class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                                 placeholder="e.g., Sales"
                             />
@@ -354,6 +363,7 @@
                             id="street" 
                             name="street" 
                             bind:value={formValues.street}
+                            maxlength="1000"
                             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                             placeholder="123 Main Street"
                         />
@@ -368,6 +378,7 @@
                                 id="city" 
                                 name="city" 
                                 bind:value={formValues.city}
+                                maxlength="1000"
                                 class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                                 placeholder="New York"
                             />
@@ -381,6 +392,7 @@
                                 id="state" 
                                 name="state" 
                                 bind:value={formValues.state}
+                                maxlength="1000"
                                 class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                                 placeholder="NY"
                             />
@@ -393,6 +405,9 @@
                                 type="text" 
                                 id="postalCode" 
                                 name="postalCode" 
+                                inputmode="numeric"
+                                pattern="[0-9]*"
+                                maxlength="20"
                                 bind:value={formValues.postalCode}
                                 class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                                 placeholder="10001"
@@ -407,6 +422,7 @@
                                 id="country" 
                                 name="country" 
                                 bind:value={formValues.country}
+                                maxlength="1000"
                                 class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                                 placeholder="United States"
                             />
@@ -433,6 +449,7 @@
                             name="description" 
                             bind:value={formValues.description}
                             rows="4"
+                            maxlength="1000"
                             class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                             placeholder="Add any additional notes or description about this contact..."
                         ></textarea>

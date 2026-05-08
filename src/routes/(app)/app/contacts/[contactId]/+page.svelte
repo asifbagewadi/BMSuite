@@ -136,10 +136,11 @@
               <div>
                 <span class="text-sm font-medium text-gray-500 dark:text-gray-400">Phone</span>
                 {#if contact.phone}
-                  <a href="tel:{contact.phone}" class="flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline mt-1">
+                  <!-- Call feature removed -->
+                  <span class="flex items-center gap-2 text-gray-900 dark:text-white mt-1">
                     <Phone class="w-4 h-4" />
                     {contact.phone}
-                  </a>
+                  </span>
                 {:else}
                   <p class="text-gray-900 dark:text-white mt-1">N/A</p>
                 {/if}

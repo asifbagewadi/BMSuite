@@ -92,6 +92,12 @@ export const actions = {
         if (!firstName) errors.firstName = 'First name is required';
         if (!lastName) errors.lastName = 'Last name is required';
         
+        // Account is required when not coming from a specific account page
+        const urlAccountId = url.searchParams.get('accountId');
+        if (!urlAccountId && !accountId) {
+            errors.accountId = 'Account is required';
+        }
+        
         if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
             errors.email = 'Please enter a valid email address';
         }

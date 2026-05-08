@@ -26,6 +26,7 @@
   let postalCode = $state(contact?.postalCode || '');
   let country = $state(contact?.country || '');
   let description = $state(contact?.description || '');
+  let selectedAccountId = $state(account?.id || '');
   let submitting = $state(false);
   let errorMsg = $state('');
   let phoneError = $state('');
@@ -63,6 +64,7 @@
     formData.append('postalCode', postalCode);
     formData.append('country', country);
     formData.append('description', description);
+    formData.append('accountId', selectedAccountId);
     // Remove isPrimary and role from form submission
     
     const res = await fetch('', {
@@ -121,6 +123,7 @@
                 class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400" 
                 bind:value={firstName} 
                 required 
+                maxlength="1000"
                 placeholder="Enter first name"
               />
             </div>
@@ -133,6 +136,7 @@
                 class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400" 
                 bind:value={lastName} 
                 required 
+                maxlength="1000"
                 placeholder="Enter last name"
               />
             </div>
@@ -144,6 +148,7 @@
                 id="title" 
                 class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400" 
                 bind:value={title} 
+                maxlength="1000"
                 placeholder="e.g. Marketing Director"
               />
             </div>
@@ -155,6 +160,7 @@
                 id="department" 
                 class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400" 
                 bind:value={department} 
+                maxlength="1000"
                 placeholder="e.g. Marketing"
               />
             </div>
@@ -236,6 +242,7 @@
                 id="street" 
                 class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400" 
                 bind:value={street} 
+                maxlength="1000"
                 placeholder="123 Main Street"
               />
             </div>
@@ -248,6 +255,7 @@
                   id="city" 
                   class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400" 
                   bind:value={city} 
+                  maxlength="1000"
                   placeholder="San Francisco"
                 />
               </div>
@@ -259,6 +267,7 @@
                   id="state" 
                   class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400" 
                   bind:value={stateField} 
+                  maxlength="1000"
                   placeholder="CA"
                 />
               </div>
@@ -269,6 +278,9 @@
                 <input 
                   id="postalCode" 
                   class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400" 
+                  inputmode="numeric"
+                  pattern="[0-9]*"
+                  maxlength="20"
                   bind:value={postalCode} 
                   placeholder="94102"
                 />
@@ -282,6 +294,7 @@
                 id="country" 
                 class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400" 
                 bind:value={country} 
+                maxlength="1000"
                 placeholder="United States"
               />
             </div>
@@ -290,40 +303,40 @@
       </div>
 
       <!-- Account Relationship Card -->
-      {#if account}
-        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
-          <div class="px-6 py-4 border-b border-gray-200 dark:border-gray-700">
-            <div class="flex items-center gap-3">
-              <div class="p-2 bg-orange-50 dark:bg-orange-900/20 rounded-lg">
-                <Building class="w-5 h-5 text-orange-600 dark:text-orange-400" />
-              </div>
-              <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Account Relationship</h2>
+      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
+        <div class="px-6 py-4 border-b border-gray-200 dark:border-gray-700">
+          <div class="flex items-center gap-3">
+            <div class="p-2 bg-orange-50 dark:bg-orange-900/20 rounded-lg">
+              <Building class="w-5 h-5 text-orange-600 dark:text-orange-400" />
             </div>
-          </div>
-          <div class="p-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <div class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Account</div>
-                <div class="text-gray-900 dark:text-white font-medium">{account.name}</div>
-              </div>
-              {#if role}
-                <div>
-                  <div class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Role</div>
-                  <div class="text-gray-900 dark:text-white">{role}</div>
-                </div>
-              {/if}
-              {#if isPrimary}
-                <div class="md:col-span-2">
-                  <div class="flex items-center gap-2 text-sm">
-                    <Star class="w-4 h-4 text-yellow-500" />
-                    <span class="text-gray-700 dark:text-gray-300 font-medium">Primary Contact</span>
-                  </div>
-                </div>
-              {/if}
-            </div>
+            <h2 class="text-lg font-semibold text-gray-900 dark:text-white">Account Relationship</h2>
           </div>
         </div>
-      {/if}
+        <div class="p-6">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2" for="accountId">
+              Account *
+            </label>
+            <select
+              id="accountId"
+              bind:value={selectedAccountId}
+              required
+              class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+            >
+              <option value="">Select an account</option>
+              {#each data.accounts as acc}
+                <option value={acc.id}>{acc.name}</option>
+              {/each}
+            </select>
+          </div>
+          {#if isPrimary}
+            <div class="mt-4 flex items-center gap-2 text-sm">
+              <Star class="w-4 h-4 text-yellow-500" />
+              <span class="text-gray-700 dark:text-gray-300 font-medium">Primary Contact</span>
+            </div>
+          {/if}
+        </div>
+      </div>
 
       <!-- Additional Information Card -->
       <div class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
@@ -344,6 +357,7 @@
               id="description" 
               class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400" 
               rows="4" 
+              maxlength="1000"
               bind:value={description}
               placeholder="Add any additional notes or important information about this contact..."
             ></textarea>

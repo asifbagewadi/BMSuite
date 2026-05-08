@@ -49,22 +49,26 @@
 	// Get logged-in user id from data (must be provided by server load)
 	let loggedInUserId = $derived(data.user?.id);
 	/** @type {Array<{id: string, name: string, email: string, role: string, joined: string, avatar: string, isSelf: boolean, editingRole: boolean}>} */
-	let users = $derived(Array.isArray(data.users)
-		? data.users.map((u) => ({
-				id: u.user.id,
-				name: u.user.name || u.user.email,
-				email: u.user.email,
-				role: u.role,
-				joined: u.joinedAt
-					? typeof u.joinedAt === 'string'
-						? u.joinedAt.slice(0, 10)
-						: new Date(u.joinedAt).toISOString().slice(0, 10)
-					: '',
-				avatar: u.user.profilePhoto || '',
-				isSelf: loggedInUserId === u.user.id,
-				editingRole: false
-			}))
-		: []);
+	let users = $state([]);
+
+	$effect(() => {
+		users = Array.isArray(data.users)
+			? data.users.map((u) => ({
+					id: u.user.id,
+					name: u.user.name || u.user.email,
+					email: u.user.email,
+					role: u.role,
+					joined: u.joinedAt
+						? typeof u.joinedAt === 'string'
+							? u.joinedAt.slice(0, 10)
+							: new Date(u.joinedAt).toISOString().slice(0, 10)
+						: '',
+					avatar: u.user.profilePhoto || '',
+					isSelf: loggedInUserId === u.user.id,
+					editingRole: false
+				}))
+			: [];
+	});
 
 	// Map roles to icons (only ADMIN and USER exist in schema)
 	/** @type {Record<string, any>} */
@@ -78,6 +82,19 @@
 		ADMIN: 'bg-red-50 text-red-700 border-red-200 dark:bg-red-900/20 dark:text-red-300 dark:border-red-800',
 		USER: 'bg-blue-50 text-blue-700 border-blue-200 dark:bg-blue-900/20 dark:text-blue-300 dark:border-blue-800'
 	};
+
+	// Delete confirmation modal state
+	/** @type {{ id: string, name: string } | null} */
+	let userToDelete = $state(null);
+
+	/** @param {{ id: string, name: string }} user */
+	function confirmDelete(user) {
+		userToDelete = user;
+	}
+
+	function cancelDelete() {
+		userToDelete = null;
+	}
 </script>
 
 <div class="min-h-screen bg-gray-50 dark:bg-gray-900 py-8">
@@ -406,26 +423,14 @@
 											{#if user.isSelf}
 												<span class="text-gray-300 dark:text-gray-600 cursor-not-allowed">—</span>
 											{:else}
-												<form 
-													method="POST" 
-													action="?/remove_user" 
-													use:enhance
-													class="inline"
-													onsubmit={(e) => {
-														if (!confirm('Remove this user from the organization?')) {
-															e.preventDefault();
-														}
-													}}
+												<button 
+													type="button"
+													onclick={() => confirmDelete({ id: user.id, name: user.name })}
+													class="rounded-lg p-2 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 hover:text-red-700 dark:hover:text-red-300"
+													title="Remove user"
 												>
-													<input type="hidden" name="user_id" value={user.id} />
-													<button 
-														type="submit" 
-														class="rounded-lg p-2 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 hover:text-red-700 dark:hover:text-red-300"
-														title="Remove user"
-													>
-														<Trash2 class="h-4 w-4" />
-													</button>
-												</form>
+													<Trash2 class="h-4 w-4" />
+												</button>
 											{/if}
 										</td>
 									</tr>
@@ -438,3 +443,66 @@
 		</div>
 	</div>
 </div>
+
+<!-- Delete Confirmation Modal -->
+{#if userToDelete}
+	<div
+		transition:fade={{ duration: 150 }}
+		class="fixed inset-0 z-50 flex items-center justify-center p-4"
+		role="dialog"
+		aria-modal="true"
+		aria-labelledby="delete-modal-title"
+	>
+		<!-- Backdrop -->
+		<div
+			class="absolute inset-0 bg-black/50 dark:bg-black/70"
+			onclick={cancelDelete}
+			aria-hidden="true"
+		></div>
+
+		<!-- Modal panel -->
+		<div
+			transition:slide={{ duration: 200 }}
+			class="relative z-10 w-full max-w-sm rounded-2xl bg-white dark:bg-gray-800 shadow-xl ring-1 ring-gray-200 dark:ring-gray-700 p-6"
+		>
+			<!-- Icon -->
+			<div class="flex h-12 w-12 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/30 mx-auto mb-4">
+				<Trash2 class="h-6 w-6 text-red-600 dark:text-red-400" />
+			</div>
+
+			<h3 id="delete-modal-title" class="text-center text-lg font-semibold text-gray-900 dark:text-white mb-2">
+				Remove member?
+			</h3>
+			<p class="text-center text-sm text-gray-500 dark:text-gray-400 mb-6">
+				<span class="font-medium text-gray-700 dark:text-gray-300">{userToDelete.name}</span> will be removed from the organization. This action cannot be undone.
+			</p>
+
+			<form
+				method="POST"
+				action="?/remove_user"
+				use:enhance={() => {
+					return async ({ update }) => {
+						userToDelete = null;
+						await update();
+					};
+				}}
+				class="flex gap-3"
+			>
+				<input type="hidden" name="user_id" value={userToDelete?.id} />
+				<button
+					type="button"
+					onclick={cancelDelete}
+					class="flex-1 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-4 py-2.5 text-sm font-semibold text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors"
+				>
+					Cancel
+				</button>
+				<button
+					type="submit"
+					class="flex-1 rounded-xl bg-red-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-red-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600 transition-colors"
+				>
+					Remove
+				</button>
+			</form>
+		</div>
+	</div>
+{/if}

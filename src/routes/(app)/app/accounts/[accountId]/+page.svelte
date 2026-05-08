@@ -445,9 +445,8 @@
                           </td>
                           <td class="py-4 text-gray-900 dark:text-white hidden lg:table-cell">
                             {#if contact.phone}
-                              <a href="tel:{contact.phone}" class="text-blue-600 dark:text-blue-400 hover:underline">
-                                {contact.phone}
-                              </a>
+                              <!-- Call feature removed -->
+                              <span>{contact.phone}</span>
                             {:else}
                               N/A
                             {/if}

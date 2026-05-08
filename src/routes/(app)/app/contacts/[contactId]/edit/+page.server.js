@@ -17,11 +17,21 @@ export async function load({ params, locals }) {
     where: { contactId: params.contactId },
     include: { account: true }
   });
+
+  // Load all accounts in the org for the dropdown
+  const accounts = await prisma.account.findMany({
+    where: { organizationId: org.id, isDeleted: false },
+    select: { id: true, name: true },
+    orderBy: { name: 'asc' }
+  });
+
   return {
     contact,
     account: accountRel?.account || null,
+    accountRelId: accountRel?.id || null,
     isPrimary: accountRel?.isPrimary || false,
-    role: accountRel?.role || ''
+    role: accountRel?.role || '',
+    accounts
   };
 }
 
@@ -43,9 +53,14 @@ export const actions = {
     const postalCode = formData.get('postalCode')?.toString().trim() || null;
     const country = formData.get('country')?.toString().trim() || null;
     const description = formData.get('description')?.toString().trim() || null;
+    const newAccountId = formData.get('accountId')?.toString() || null;
 
     if (!firstName || !lastName) {
       return fail(400, { message: 'First and last name are required.' });
+    }
+
+    if (!newAccountId) {
+      return fail(400, { message: 'Account is required.' });
     }
 
     // Validate phone number if provided
@@ -65,7 +80,7 @@ export const actions = {
       return fail(404, { message: 'Contact not found' });
     }
 
-    // Update contact
+    // Update contact fields
     await prisma.contact.update({
       where: { id: params.contactId },
       data: { 
@@ -83,6 +98,47 @@ export const actions = {
         description 
       }
     });
+
+    // Handle account relationship change
+    const existingRel = await prisma.accountContactRelationship.findFirst({
+      where: { contactId: params.contactId }
+    });
+
+    if (newAccountId) {
+      // Validate the account belongs to the org
+      const accountExists = await prisma.account.findFirst({
+        where: { id: newAccountId, organizationId: org.id, isDeleted: false }
+      });
+      if (!accountExists) {
+        return fail(400, { message: 'Selected account not found.' });
+      }
+
+      if (existingRel) {
+        if (existingRel.accountId !== newAccountId) {
+          // Account changed — update the relationship
+          await prisma.accountContactRelationship.update({
+            where: { id: existingRel.id },
+            data: { accountId: newAccountId }
+          });
+        }
+        // Same account — no change needed
+      } else {
+        // No existing relationship — create one
+        await prisma.accountContactRelationship.create({
+          data: {
+            accountId: newAccountId,
+            contactId: params.contactId,
+            isPrimary: false,
+            role: null
+          }
+        });
+      }
+    } else if (existingRel) {
+      // Account cleared — remove the relationship
+      await prisma.accountContactRelationship.delete({
+        where: { id: existingRel.id }
+      });
+    }
 
     return { success: true };
   }

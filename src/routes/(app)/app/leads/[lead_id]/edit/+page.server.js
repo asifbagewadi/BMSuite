@@ -85,39 +85,7 @@ export const actions = {
     }
 
     // Check if leadEmail is a non-empty string before proceeding
-    if (typeof leadEmail === 'string' && leadEmail.trim() !== '') {
-      // Step 1: Find the user by email
-      const user = await prisma.user.findUnique({
-        where: { email: leadEmail },
-        select: { id: true }, // Select only the user ID
-      });
-
-      if (user) {
-        // Step 2: Find the UserOrganization record using the user's ID and organization ID
-        // This uses the compound unique key @@unique([userId, organizationId])
-        const userOrgMembership = await prisma.userOrganization.findUnique({
-          where: {
-            userId_organizationId: {
-              userId: user.id,
-              organizationId: org.id,
-            },
-          },
-          select: { id: true } // Fetch only id to confirm existence
-        });
-        if (!userOrgMembership) {
-          return {
-            success: false,
-            error: 'User is not part of this organization.'
-          };
-        } 
-        // If userOrgMembership exists, validation passes.
-      } else {
-        return {
-          success: false,
-          error: 'User with this email does not exist.'
-        };
-      }
-    }
+    // Note: leadEmail is the lead's contact email (not a system user email), no user validation needed.
 
     // Get and validate form data
     const statusValue = formData.get('status')?.toString() || 'NEW';

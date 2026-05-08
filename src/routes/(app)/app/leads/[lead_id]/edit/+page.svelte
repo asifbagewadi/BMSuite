@@ -190,6 +190,7 @@
                 value={lead.firstName}
                 class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all {errors.firstName ? 'border-red-500 dark:border-red-400 ring-2 ring-red-200 dark:ring-red-800' : ''}"
                 placeholder="Enter first name"
+                maxlength="1000"
               />
               {#if errors.firstName}
                 <p class="mt-1 text-sm text-red-600 dark:text-red-400">{errors.firstName}</p>
@@ -208,6 +209,7 @@
                 value={lead.lastName}
                 class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all {errors.lastName ? 'border-red-500 dark:border-red-400 ring-2 ring-red-200 dark:ring-red-800' : ''}"
                 placeholder="Enter last name"
+                maxlength="1000"
               />
               {#if errors.lastName}
                 <p class="mt-1 text-sm text-red-600 dark:text-red-400">{errors.lastName}</p>
@@ -269,6 +271,7 @@
                 value={lead.company || ''}
                 class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all"
                 placeholder="Enter company name"
+                maxlength="1000"
               />
             </div>
             
@@ -281,6 +284,7 @@
                 value={lead.title || ''}
                 class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all"
                 placeholder="Enter job title"
+                maxlength="1000"
               />
             </div>
             
@@ -291,7 +295,7 @@
                 name="industry"
                 class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-all"
               >
-                <option value="">Select Industry</option>
+                <option value="">-- Select --</option>
                 {#each industryOptions as option}
                   <option value={option.value} selected={lead.industry === option.value}>{option.name}</option>
                 {/each}
@@ -331,7 +335,7 @@
                 name="leadSource"
                 class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-all"
               >
-                <option value="">Select Source</option>
+                <option value="">-- Select --</option>
                 {#each sourceOptions as option}
                   <option value={option.value} selected={lead.leadSource === option.value}>{option.name}</option>
                 {/each}
@@ -380,6 +384,7 @@
               value={lead.description || ''}
               class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all resize-vertical"
               placeholder="Add notes, requirements, or any additional information about this lead..."
+              maxlength="1000"
             ></textarea>
           </div>
         </div>
