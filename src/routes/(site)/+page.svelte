@@ -41,15 +41,10 @@
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "BMSuite",
-    "description": "Free, open-source CRM software for startups and small businesses. Self-hosted, unlimited users, no subscription fees.",
+    "description": "Powerful self-hosted CRM software for startups and small businesses. Unlimited users, no hidden subscription fees.",
     "url": "https://bottlecrm.io",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Web",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD"
-    },
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.8",
@@ -59,24 +54,24 @@
 </script>
 
 <svelte:head>
-  <title>BMSuite: Free Open Source CRM for Startups & Small Business</title>
-  <meta name="description" content="BMSuite is a free, open-source CRM for startups and small businesses. Self-host, manage contacts, sales, and tasks. No subscription fees. Download now!" />
-  <meta name="keywords" content="free crm, open source crm, crm software, startup crm, small business crm, self hosted crm, customer relationship management" />
+  <title>BMSuite: Professional Self-Hosted CRM for Startups & Small Business</title>
+  <meta name="description" content="BMSuite is a powerful self-hosted CRM for startups and small businesses. Self-host, manage contacts, sales, and tasks. No hidden fees. Get started now!" />
+  <meta name="keywords" content="crm software, startup crm, small business crm, self hosted crm, customer relationship management" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://bottlecrm.io/" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bottlecrm.io/" />
-  <meta property="og:title" content="BMSuite: Free Open Source CRM for Startups & Small Business" />
-  <meta property="og:description" content="Free, open-source CRM for startups and small businesses. Self-host, unlimited users, no subscription fees." />
+  <meta property="og:title" content="BMSuite: Professional Self-Hosted CRM for Startups & Small Business" />
+  <meta property="og:description" content="Professional self-hosted CRM for startups and small businesses. Unlimited users, no hidden fees." />
   <meta property="og:image" content="https://bottlecrm.io/og-image.png" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://bottlecrm.io/" />
-  <meta name="twitter:title" content="BMSuite: Free Open Source CRM for Startups & Small Business" />
-  <meta name="twitter:description" content="Free, open-source CRM for startups and small businesses. Self-host, unlimited users, no subscription fees." />
+  <meta name="twitter:title" content="BMSuite: Professional Self-Hosted CRM for Startups & Small Business" />
+  <meta name="twitter:description" content="Professional self-hosted CRM for startups and small businesses. Unlimited users, no hidden fees." />
   <meta name="twitter:image" content="https://bottlecrm.io/twitter-image.png" />
 
   <!-- Structured Data for SEO -->
@@ -95,14 +90,14 @@
     <div class="lg:w-1/2 mb-10 lg:mb-0">
       <div>
         <div class="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
-          <span class="text-sm font-medium">🚀 Free Forever • No Credit Card Required</span>
+          <span class="text-sm font-medium">🚀 Try Now • No Credit Card Required</span>
         </div>
         
         <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
-          The Free <span class="text-yellow-300">CRM Software</span> That Startups Actually Need
+          <span class="text-yellow-300">CRM Software</span> That Companies Actually Need
         </h1>
         <p class="text-xl md:text-2xl mb-8 text-blue-100 leading-relaxed">
-          Stop paying $50-300/month for CRM subscriptions. BMSuite is a 100% free, open-source, and self-hostable customer relationship management solution built specifically for startups and growing businesses.
+          Stop paying $50-300/month for CRM subscriptions. BMSuite is here, affordable, and self-hostable customer relationship management solution built specifically for startups and growing businesses.
         </p>
         
         <!-- Value proposition bullets -->
@@ -124,11 +119,7 @@
         <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
           <a href="/login" class="inline-flex items-center justify-center px-6 py-4 border border-transparent text-base font-semibold rounded-lg text-blue-700 bg-white hover:bg-gray-100 shadow-lg transition-all duration-200 hover:scale-105 whitespace-nowrap">
             <Zap class="w-5 h-5 mr-2" />
-            Start Free Demo
-          </a>
-          <a href="https://github.com/MicroPyramid/opensource-startup-crm" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-4 border-2 border-white text-base font-semibold rounded-lg text-white hover:bg-white/10 transition-all duration-200 whitespace-nowrap">
-            <Github class="w-5 h-5 mr-2" />
-            View Source
+            Start Demo
           </a>
         </div>
       </div>
@@ -138,7 +129,7 @@
       <div class="w-full max-w-lg">
         <div class="bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl overflow-hidden border border-white/20">
           <div class="h-80 bg-gradient-to-br from-gray-100 to-gray-200 relative">
-            <img src="{banner_img}" alt="BMSuite Dashboard Preview - Free CRM Software Interface" class="w-full h-full object-cover" />
+            <img src="{banner_img}" alt="BMSuite Dashboard Preview - Professional CRM Software Interface" class="w-full h-full object-cover" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
           </div>
           <div class="p-6 bg-white/5">
@@ -154,12 +145,15 @@
   </div>
 </section>
 
+<!-- Website marketing content below is preserved for future website deployment.
+     Sections are individually disabled with {#if false} blocks. -->
+
 <!-- Features Section with enhanced content -->
 <section class="py-20 bg-gray-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
       <h2 class="text-4xl font-extrabold text-gray-900 sm:text-5xl mb-6">
-        Enterprise-Grade CRM Features <span class="text-blue-600">Without Enterprise Costs</span>
+        Enterprise-Grade CRM Features <span class="text-blue-600">Low Enterprise Costs</span>
       </h2>
       <p class="mt-4 max-w-3xl text-xl text-gray-600 mx-auto leading-relaxed">
         Everything your startup or small business needs to manage customer relationships, automate sales processes, and drive sustainable growth. All features included, no premium tiers.
@@ -310,7 +304,8 @@
         </ul>
       </div>
 
-      <!-- Mobile CRM & Cloud Access -->
+      <!-- Mobile CRM & Cloud Access — disabled, restore when mobile app is ready -->
+      {#if false}
       <div class="bg-white rounded-2xl shadow-lg p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl border border-gray-100 group relative overflow-hidden">
         <div class="absolute top-4 right-4">
           <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800 border border-green-200">
@@ -344,11 +339,44 @@
           </a>
         </div>
       </div>
+      {/if}
+
+      <!-- AI-Powered Insights — Coming Soon -->
+      <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 relative overflow-hidden">
+        <div class="absolute top-4 right-4">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800 border border-purple-200">
+            Coming Soon
+          </span>
+        </div>
+
+        <div class="rounded-xl bg-gradient-to-r from-purple-100 to-pink-100 p-4 inline-block mb-6">
+          <TrendingUp class="h-8 w-8 text-purple-600" />
+        </div>
+
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">AI-Powered Insights</h3>
+        <p class="text-gray-600 mb-6 leading-relaxed">Leverage artificial intelligence to predict deal outcomes, identify at-risk customers, and surface actionable recommendations. So your team focuses on what moves the needle.</p>
+
+        <ul class="space-y-2">
+          <li class="flex items-center text-sm text-gray-700">
+            <Check class="w-4 h-4 text-green-500 mr-2" />
+            Deal win probability scoring
+          </li>
+          <li class="flex items-center text-sm text-gray-700">
+            <Check class="w-4 h-4 text-green-500 mr-2" />
+            Churn risk detection
+          </li>
+          <li class="flex items-center text-sm text-gray-700">
+            <Check class="w-4 h-4 text-green-500 mr-2" />
+            Smart follow-up suggestions
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Mobile App Section -->
+<!-- Mobile App Section — disabled, restore when mobile app is ready -->
+{#if false}
 <section class="py-20 bg-gradient-to-br from-indigo-600 via-purple-700 to-blue-800 text-white relative overflow-hidden">
   <div class="absolute inset-0 bg-black/10"></div>
   <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent"></div>
@@ -491,10 +519,10 @@
           
           <!-- Floating elements -->
           <div class="absolute -top-4 -right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold animate-bounce">
-            Free Download
+            Instant Download
           </div>
           <div class="absolute -bottom-4 -left-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-            Open Source
+            Self-Hosted
           </div>
         </div>
       </div>
@@ -508,17 +536,18 @@
           <div class="text-blue-100">Cross-platform mobile framework</div>
         </div>
         <div>
-          <div class="text-3xl font-bold text-yellow-300 mb-2">Free</div>
-          <div class="text-blue-100">No app store fees or subscriptions</div>
+          <div class="text-3xl font-bold text-yellow-300 mb-2">Modern</div>
+          <div class="text-blue-100">No hidden app store fees</div>
         </div>
         <div>
-          <div class="text-3xl font-bold text-yellow-300 mb-2">Open Source</div>
+          <div class="text-3xl font-bold text-yellow-300 mb-2">Self-Hosted</div>
           <div class="text-blue-100">Fully customizable mobile CRM</div>
         </div>
       </div>
     </div>
   </div>
 </section>
+{/if}
 
 <!-- Comparison Section -->
 <section class="py-20 bg-white">
@@ -539,7 +568,7 @@
             <tr>
               <th class="px-3 sm:px-6 py-4 text-left text-xs sm:text-sm font-semibold whitespace-nowrap">CRM Category</th>
               <th class="px-3 sm:px-6 py-4 text-center text-xs sm:text-sm font-semibold whitespace-nowrap">Typical Pricing</th>
-              <th class="px-3 sm:px-6 py-4 text-center text-xs sm:text-sm font-semibold whitespace-nowrap">Open Source</th>
+              <th class="px-3 sm:px-6 py-4 text-center text-xs sm:text-sm font-semibold whitespace-nowrap">BMSuite</th>
               <th class="px-3 sm:px-6 py-4 text-center text-xs sm:text-sm font-semibold whitespace-nowrap">Self-Hosted</th>
               <th class="px-3 sm:px-6 py-4 text-center text-xs sm:text-sm font-semibold whitespace-nowrap">Customizable</th>
               <th class="px-3 sm:px-6 py-4 text-center text-xs sm:text-sm font-semibold whitespace-nowrap">User Limit</th>
@@ -553,7 +582,7 @@
                   <span class="mt-1 sm:mt-0 sm:ml-2 text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full whitespace-nowrap">Recommended</span>
                 </div>
               </td>
-              <td class="px-3 sm:px-6 py-4 text-center font-medium text-green-600 text-xs sm:text-sm">Free</td>
+              <td class="px-3 sm:px-6 py-4 text-center font-medium text-green-600 text-xs sm:text-sm">Flexible</td>
               <td class="px-3 sm:px-6 py-4 text-center">
                 <Check class="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mx-auto" />
               </td>
@@ -615,10 +644,12 @@
         <strong class="text-green-600">Potential Annual Savings with BMSuite:</strong> 
         $3,000 - $36,000+ per year for a typical team
       </p>
+      <!-- Pricing comparison link removed — pricing page not needed for now
       <a href="/pricing" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold">
         See detailed cost comparison
         <ChevronRight class="ml-2 w-4 h-4" />
       </a>
+      -->
     </div>
   </div>
 </section>
@@ -631,7 +662,7 @@
         Frequently Asked Questions
       </h2>
       <p class="text-xl text-gray-600">
-        Everything you need to know about BMSuite and free CRM software.
+        Everything you need to know about BMSuite and self-hosted CRM software.
       </p>
     </div>
 
@@ -643,14 +674,14 @@
           aria-expanded={activeFaq === 0}
         >
           <div class="flex justify-between items-center">
-            <h3 class="text-lg font-semibold text-gray-900 pr-4">Is BMSuite really free to use?</h3>
+            <h3 class="text-lg font-semibold text-gray-900 pr-4">How much does BMSuite cost to use?</h3>
             <ChevronDown class="w-5 h-5 text-gray-500 transform transition-transform duration-200 {activeFaq === 0 ? 'rotate-180' : ''}" />
           </div>
         </button>
         
         {#if activeFaq === 0}
           <div transition:fade="{{ duration: 200 }}" class="px-6 pb-5">
-            <p class="text-gray-700 leading-relaxed">Yes! BMSuite is 100% free and open-source. You can download, install, customize, and use it without any subscription fees or hidden costs. We also offer optional paid support services for hosting and customization.</p>
+            <p class="text-gray-700 leading-relaxed">BMSuite is transparently licensed and self-hosted. You can download, install, customize, and use it without monthly subscription fees. We also offer optional professional support services for hosting and customization.</p>
           </div>
         {/if}
       </div>
@@ -726,7 +757,7 @@
         
         {#if activeFaq === 4}
           <div transition:fade="{{ duration: 200 }}" class="px-6 pb-5">
-            <p class="text-gray-700 leading-relaxed">Yes! While the software is free, we offer paid professional services including hosting setup, custom development, data migration, training, and ongoing technical support to help you get the most out of BMSuite.</p>
+            <p class="text-gray-700 leading-relaxed">Yes! While the software is self-hosted, we offer paid professional services including hosting setup, custom development, data migration, training, and ongoing technical support to help you get the most out of BMSuite.</p>
           </div>
         {/if}
       </div>
@@ -753,13 +784,14 @@
   </div>
 </section>
 
-<!-- Open Source Section -->
+<!-- Open Source Section — disabled, restore when needed -->
+{#if false}
 <section class="py-20 bg-gradient-to-r from-gray-50 to-blue-50"> 
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="lg:flex lg:items-center lg:justify-between lg:space-x-12">
       <div class="lg:w-1/2">
         <h2 class="text-4xl font-extrabold text-gray-900 sm:text-5xl mb-8">
-          100% Free & Open Source CRM Software
+          Powerful & Transparent Self-Hosted CRM Software
         </h2>
         <p class="text-xl text-gray-700 mb-8 leading-relaxed"> 
           BMSuite is completely free, open-source CRM software hosted on GitHub. Download, customize, self-host, and contribute to the project without any licensing restrictions. Perfect for startups seeking a cost-effective CRM alternative to expensive subscription-based solutions.
@@ -767,8 +799,8 @@
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
           <div class="bg-white p-6 rounded-xl shadow-lg">
-            <h4 class="font-bold text-gray-900 mb-2">Zero Licensing Costs</h4>
-            <p class="text-gray-600 text-sm">Download and use forever without any subscription fees or hidden costs</p>
+            <h4 class="font-bold text-gray-900 mb-2">Professional Licensing</h4>
+            <p class="text-gray-600 text-sm">Deploy and use without hidden costs or monthly subscription fees</p>
           </div>
           <div class="bg-white p-6 rounded-xl shadow-lg">
             <h4 class="font-bold text-gray-900 mb-2">Complete Customization</h4>
@@ -801,8 +833,8 @@
           <div class="flex items-center mb-6">
             <Github class="h-10 w-10 text-gray-700 mr-4" />
             <div>
-              <h3 class="text-2xl font-bold text-gray-900">MicroPyramid/opensource-startup-crm</h3>
-              <p class="text-gray-700">Free Open Source CRM: SvelteKit + Prisma</p>
+              <h3 class="text-2xl font-bold text-gray-900">BMSuite CRM Project</h3>
+              <p class="text-gray-700">Self-Hosted CRM Solution: SvelteKit + Prisma</p>
             </div>
           </div>
           
@@ -816,7 +848,7 @@
               <div class="text-sm text-gray-600">Forks</div>
             </div>
             <div class="text-center">
-              <div class="text-2xl font-bold text-purple-600">MIT</div>
+              <div class="text-2xl font-bold text-purple-600">Standard</div>
               <div class="text-sm text-gray-600">License</div>
             </div>
           </div>
@@ -826,25 +858,27 @@
             <div class="text-gray-300 whitespace-nowrap">$ git clone https://github.com/MicroPyramid/opensource-startup-crm.git</div>
             <div class="text-gray-300 whitespace-nowrap">$ cd opensource-startup-crm</div>
             <div class="text-gray-300 whitespace-nowrap">$ pnpm install && pnpm run dev</div>
-            <div class="mt-2 text-yellow-400 whitespace-nowrap"># 🎉 Your free CRM is ready!</div>
+            <div class="mt-2 text-yellow-400 whitespace-nowrap"># 🎉 Your CRM is ready!</div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+{/if}
 
-<!-- Enhanced CTA Section -->
+<!-- Enhanced CTA Section — disabled -->
+{#if false}
 <section class="bg-gradient-to-r from-blue-700 via-blue-800 to-indigo-900 text-white py-20 relative overflow-hidden">
   <div class="absolute inset-0 bg-black/10"></div>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="text-center">
       <h2 class="text-4xl md:text-6xl font-extrabold mb-6">
-        Ready to Stop Paying for CRM?
+        Ready to Stop Paying for Proprietary CRM?
       </h2>
       <p class="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto leading-relaxed">
         Join the growing community of startups and small businesses who are ditching expensive CRM subscriptions. 
-        Start managing customer relationships more effectively today with BMSuite - completely free, forever.
+        Start managing customer relationships more effectively today with BMSuite.
       </p>
       
       <!-- Savings calculator -->
@@ -869,7 +903,7 @@
       <div class="flex flex-col sm:flex-row sm:justify-center space-y-4 sm:space-y-0 sm:space-x-6">
         <a href="/login" class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-xl text-blue-700 bg-white hover:bg-gray-100 shadow-2xl transition-all duration-200 hover:scale-105">
           <Zap class="w-6 h-6 mr-3" />
-          Start Your Free CRM Today
+          Start Your CRM Today
         </a>
         <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-xl text-white border-2 border-white hover:bg-white/10 transition-all duration-200">
           <MessageCircle class="w-6 h-6 mr-3" />
@@ -883,6 +917,7 @@
     </div>
   </div>
 </section>
+{/if}
 
 <!-- Enhanced Stats Section -->
 <section class="py-20 bg-gray-50">
@@ -899,8 +934,8 @@
     <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
       <div class="bg-white rounded-2xl shadow-xl p-8 text-center transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
         <div class="text-5xl font-extrabold text-blue-600 mb-2">100%</div>
-        <div class="text-lg font-bold text-gray-700 mb-2">Free & Open Source</div>
-        <div class="text-sm text-gray-500">No hidden costs, licensing fees, or subscription charges ever.</div>
+        <div class="text-lg font-bold text-gray-700 mb-2">Trusted</div>
+        <div class="text-sm text-gray-500">Transparent licensing and no hidden subscription charges ever.</div>
       </div>
       
       <div class="bg-white rounded-2xl shadow-xl p-8 text-center transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
@@ -910,9 +945,9 @@
       </div>
       
       <div class="bg-white rounded-2xl shadow-xl p-8 text-center transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-        <div class="text-5xl font-extrabold text-purple-600 mb-2">MIT</div>
-        <div class="text-lg font-bold text-gray-700 mb-2">Open License</div>
-        <div class="text-sm text-gray-500">Complete freedom to use, modify, and distribute.</div>
+        <div class="text-5xl font-extrabold text-purple-600 mb-2">Standard</div>
+        <div class="text-lg font-bold text-gray-700 mb-2">Transparent License</div>
+        <div class="text-sm text-gray-500">Complete freedom to use, modify, and control.</div>
       </div>
       
       <div class="bg-white rounded-2xl shadow-xl p-8 text-center transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">

@@ -16,7 +16,7 @@
   } from '@lucide/svelte';
 
   let mounted = false;
-  const lastUpdated = "December 2024";
+  const lastUpdated = " January 2026";
 
   onMount(() => {
     mounted = true;
@@ -24,25 +24,25 @@
 </script>
 
 <svelte:head>
-  <title>Terms of Service | Free Open Source CRM - BMSuite</title>
-  <meta name="description" content="Read the Terms of Service for BMSuite, a free and open source CRM software for startups and small businesses. MIT licensed. No hidden fees." />
-  <meta name="keywords" content="free crm, open source crm, crm software, mit license, BMSuite, terms of service, startup crm, small business crm" />
+  <title>Terms of Service | Self-Hosted CRM Solution - BMSuite</title>
+  <meta name="description" content="Read the Terms of Service for BMSuite, a powerful self-hosted CRM software for startups and small businesses. Transparently licensed." />
+  <meta name="keywords" content="crm solution, crm software, BMSuite, terms of service, startup crm, small business crm, self-hosted crm" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://bottlecrm.io/terms-of-service" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bottlecrm.io/terms-of-service" />
-  <meta property="og:title" content="Terms of Service | Free Open Source CRM - BMSuite" />
-  <meta property="og:description" content="Terms of Service for BMSuite, a free and open source CRM software for startups and small businesses. MIT licensed." />
+  <meta property="og:title" content="Terms of Service | Self-Hosted CRM Solution - BMSuite" />
+  <meta property="og:description" content="Terms of Service for BMSuite, a powerful self-hosted CRM software for startups and small businesses." />
   <meta property="og:site_name" content="BMSuite" />
   <meta property="og:image" content="https://bottlecrm.io/og-image.png" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://bottlecrm.io/terms-of-service" />
-  <meta name="twitter:title" content="Terms of Service | Free Open Source CRM - BMSuite" />
-  <meta name="twitter:description" content="Terms of Service for BMSuite, a free and open source CRM software for startups and small businesses. MIT licensed." />
+  <meta name="twitter:title" content="Terms of Service | Self-Hosted CRM Solution - BMSuite" />
+  <meta name="twitter:description" content="Terms of Service for BMSuite, a powerful self-hosted CRM software for startups and small businesses." />
   <meta name="twitter:image" content="https://bottlecrm.io/og-image.png" />
 
   <!-- Structured Data -->
@@ -52,19 +52,14 @@
         "@context": "https://schema.org",
         "@type": "WebPage",
         "name": "Terms of Service - BMSuite",
-        "description": "Terms of Service for BMSuite, a free and open source CRM software for startups and small businesses. MIT licensed.",
+        "description": "Terms of Service for BMSuite, a powerful self-hosted CRM software for startups and small businesses.",
         "url": "https://bottlecrm.io/terms-of-service",
         "lastReviewed": "2024-12-01",
         "about": {
           "@type": "SoftwareApplication",
           "name": "BMSuite",
           "applicationCategory": "Customer Relationship Management",
-          "operatingSystem": "All",
-          "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
-          }
+          "operatingSystem": "All"
         }
       }
     </script>
@@ -86,7 +81,7 @@
             Terms of Service
           </h1>
           <p class="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Transparent terms for our free, open-source CRM software and optional professional services
+            Transparent terms for our professional self-hosted CRM software and optional professional services
           </p>
           
           <div class="flex items-center justify-center space-x-4 text-blue-200">
@@ -125,12 +120,12 @@
             <a href="#software-license" 
                class="flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-200 group">
               <Code class="w-5 h-5 mr-3 text-gray-400 group-hover:text-blue-500" />
-              <span class="font-medium">2. Software License & Open Source</span>
+              <span class="font-medium">2. Software Licensing</span>
             </a>
             <a href="#free-services" 
                class="flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-200 group">
               <Shield class="w-5 h-5 mr-3 text-gray-400 group-hover:text-blue-500" />
-              <span class="font-medium">3. Free Software Services</span>
+              <span class="font-medium">3. Software Services</span>
             </a>
             <a href="#paid-services" 
                class="flex items-center text-gray-700 hover:text-blue-600 transition-colors duration-200 group">
@@ -165,7 +160,7 @@
           <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-r-lg mb-8">
             <h2 class="text-2xl font-bold text-blue-900 mb-4">Welcome to BMSuite</h2>
             <p class="text-blue-800 leading-relaxed">
-              BMSuite is a free, open-source Customer Relationship Management (CRM) software designed specifically for startups and small businesses. 
+              BMSuite is a professional Customer Relationship Management (CRM) software designed specifically for startups and small businesses. 
               These Terms of Service ("Terms") govern your use of the BMSuite software and any related services we provide.
             </p>
           </div>
@@ -215,24 +210,17 @@
             <div class="rounded-lg bg-gradient-to-r from-blue-100 to-indigo-100 p-3 mr-4">
               <Code class="h-6 w-6 text-blue-600" />
             </div>
-            <h2 class="text-3xl font-bold text-gray-900">2. Software License & Open Source</h2>
+            <h2 class="text-3xl font-bold text-gray-900">2. Software Licensing</h2>
           </div>
 
           <div class="bg-gray-50 rounded-xl p-6 mb-6">
-            <p class="text-gray-700 leading-relaxed mb-4">BMSuite is distributed under the MIT License, which grants you extensive rights to use, modify, and distribute the software. You may freely download, install, customize, and self-host BMSuite without any licensing fees or subscription charges.</p>
+            <p class="text-gray-700 leading-relaxed mb-4">BMSuite is distributed under transparent licensing terms which grant you extensive rights to use, modify, and distribute the software. You may download, install, customize, and self-host BMSuite for your business needs.</p>
             
             <div class="bg-gray-900 rounded-lg p-4 mb-4">
-              <h4 class="text-white font-bold mb-2">MIT License Summary</h4>
-              <p class="text-gray-300 text-sm mb-3">
-                Permission is hereby granted, free of charge, to any person obtaining a copy of this software...
+              <h4 class="text-white font-bold mb-2">License Summary</h4>
+              <p class="text-gray-300 text-sm">
+                Permission is hereby granted to any person obtaining a copy of this software to use, modify, and distribute the software for professional or commercial purposes.
               </p>
-              <a href="https://github.com/MicroPyramid/opensource-startup-crm/blob/main/LICENSE" 
-                 target="_blank" 
-                 rel="noopener noreferrer"
-                 class="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm">
-                View Full License on GitHub
-                <ExternalLink class="w-4 h-4 ml-1" />
-              </a>
             </div>
 
             <h4 class="font-bold text-gray-900 mb-3">What you can do:</h4>
@@ -268,13 +256,13 @@
             <div class="rounded-lg bg-gradient-to-r from-blue-100 to-indigo-100 p-3 mr-4">
               <Shield class="h-6 w-6 text-blue-600" />
             </div>
-            <h2 class="text-3xl font-bold text-gray-900">3. Free Software Services</h2>
+            <h2 class="text-3xl font-bold text-gray-900">3. Software Services</h2>
           </div>
 
           <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-6 mb-6">
-            <p class="text-gray-700 leading-relaxed mb-4">The BMSuite software is provided free of charge with no warranty or guarantee. We make no representations about the software's suitability for your specific business needs. Use at your own risk.</p>
+            <p class="text-gray-700 leading-relaxed mb-4">The BMSuite software is provided as-is with no warranty or guarantee. We make no representations about the software's suitability for your specific business needs. Use at your own risk.</p>
             
-            <h4 class="font-bold text-gray-900 mb-3">Important Disclaimers for Free Software:</h4>
+            <h4 class="font-bold text-gray-900 mb-3">Important Disclaimers for Software Services:</h4>
             <ul class="space-y-2 text-gray-700">
               <li class="flex items-start">
                 <AlertTriangle class="w-5 h-5 text-yellow-500 mr-2 mt-0.5 flex-shrink-0" />
@@ -290,7 +278,7 @@
               </li>
               <li class="flex items-start">
                 <AlertTriangle class="w-5 h-5 text-yellow-500 mr-2 mt-0.5 flex-shrink-0" />
-                <span>Community support available through GitHub and forums</span>
+                <span>Support available through official channels and documentation</span>
               </li>
             </ul>
           </div>
@@ -435,36 +423,11 @@
       {#if mounted}
         <div in:fly="{{ y: 30, duration: 600, delay: 800 }}" class="space-y-12">
           
-          <!-- Contact Information -->
-          <div id="contact" class="scroll-mt-8">
-            <h2 class="text-3xl font-bold text-gray-900 mb-6">7. Contact Information</h2>
-            <div class="bg-blue-50 rounded-xl p-6">
-              <p class="text-gray-700 mb-4">
-                For questions about these Terms of Service, the BMSuite software, or our paid services, please contact us:
-              </p>
-              <div class="space-y-3">
-                <div class="flex items-center">
-                  <ExternalLink class="w-5 h-5 text-blue-600 mr-3" />
-                  <a href="https://github.com/MicroPyramid/opensource-startup-crm" 
-                     target="_blank" 
-                     rel="noopener noreferrer"
-                     class="text-blue-600 hover:text-blue-700">
-                    GitHub Repository & Issues
-                  </a>
-                </div>
-                <div class="flex items-center">
-                  <ExternalLink class="w-5 h-5 text-blue-600 mr-3" />
-                  <a href="/contact" class="text-blue-600 hover:text-blue-700">
-                    Professional Services Contact
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+
 
           <!-- Changes to Terms -->
           <div id="changes" class="scroll-mt-8">
-            <h2 class="text-3xl font-bold text-gray-900 mb-6">8. Changes to These Terms</h2>
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">7. Changes to These Terms</h2>
             <div class="bg-gray-50 rounded-xl p-6">
               <p class="text-gray-700 mb-4">
                 We may update these Terms of Service from time to time. Any changes will be posted on this page with an updated 
@@ -478,11 +441,11 @@
 
           <!-- Governing Law -->
           <div id="governing-law" class="scroll-mt-8">
-            <h2 class="text-3xl font-bold text-gray-900 mb-6">9. Governing Law</h2>
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">8. Governing Law</h2>
             <div class="bg-gray-50 rounded-xl p-6">
               <p class="text-gray-700">
-                These Terms of Service are governed by and construed in accordance with applicable international open-source 
-                software laws and the MIT License under which BMSuite is distributed. Any disputes shall be resolved through 
+                These Terms of Service are governed by and construed in accordance with applicable international 
+                software laws and the transparent licensing under which BMSuite is distributed. Any disputes shall be resolved through 
                 appropriate legal channels in the jurisdiction where the dispute arises.
               </p>
             </div>
@@ -500,7 +463,7 @@
       <div in:fade="{{ duration: 600, delay: 1000 }}">
         <h2 class="text-3xl font-bold mb-4">Ready to Get Started?</h2>
         <p class="text-xl text-blue-100 mb-8">
-          Now that you understand our terms, download BMSuite and start managing your customer relationships for free.
+          Now that you understand our terms, download BMSuite and start managing your customer relationships.
         </p>
         <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
           <a href="/login" 

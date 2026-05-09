@@ -15,12 +15,12 @@
     ArrowLeft
   } from '@lucide/svelte';
 
-  let lastUpdated = "June 2025";
+  let lastUpdated = "January 2026";
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Privacy Policy | BMSuite",
-    "description": "Read the privacy policy for BMSuite, the free and open-source CRM. Learn how your data is protected, your privacy rights, and how self-hosting ensures full control.",
+    "description": "Read the privacy policy for BMSuite, a powerful self-hosted CRM. Learn how your data is protected, your privacy rights, and how self-hosting ensures full control.",
     "url": "https://bottlecrm.io/privacy-policy",
     "dateModified": "2025-06-01",
     "publisher": {
@@ -36,15 +36,15 @@
 </script>
 
 <svelte:head>
-  <title>Privacy Policy | BMSuite - Free Open Source CRM for Data Privacy</title>
-  <meta name="description" content="Read the privacy policy for BMSuite, the free and open-source CRM. Learn how your data is protected, your privacy rights, and how self-hosting ensures full control." />
-  <meta name="keywords" content="privacy policy, free crm, open source crm, data privacy, GDPR, self-hosted CRM, data security, BMSuite" />
+  <title>Privacy Policy | BMSuite - Self-Hosted CRM Solution for Data Privacy</title>
+  <meta name="description" content="Read the privacy policy for BMSuite, a powerful self-hosted CRM. Learn how your data is protected, your privacy rights, and how self-hosting ensures full control." />
+  <meta name="keywords" content="privacy policy, crm solution, self-hosted crm, data privacy, GDPR, self-hosted CRM, data security, BMSuite" />
   <link rel="canonical" href="https://bottlecrm.io/privacy-policy" />
   <meta name="robots" content="index, follow" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Privacy Policy | BMSuite - Free Open Source CRM for Data Privacy" />
-  <meta property="og:description" content="Read how BMSuite protects your data and privacy. Free, open-source, and self-hosted CRM for businesses." />
+  <meta property="og:title" content="Privacy Policy | BMSuite - Self-Hosted CRM Solution for Data Privacy" />
+  <meta property="og:description" content="Read how BMSuite protects your data and privacy. Professional self-hosted CRM for businesses." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bottlecrm.io/privacy-policy" />
   <meta property="og:site_name" content="BMSuite" />
@@ -52,8 +52,8 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Privacy Policy | BMSuite - Free Open Source CRM" />
-  <meta name="twitter:description" content="BMSuite is a free, open-source CRM. Read our privacy policy to learn how your data is protected and your privacy rights are respected." />
+  <meta name="twitter:title" content="Privacy Policy | BMSuite - Self-Hosted CRM Solution" />
+  <meta name="twitter:description" content="BMSuite is a powerful self-hosted CRM. Read our privacy policy to learn how your data is protected and your privacy rights are respected." />
   <meta name="twitter:image" content="https://bottlecrm.io/og-image.png" />
 
   <!-- Schema.org JSON-LD -->
@@ -90,7 +90,7 @@
       </h1>
       <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
         At BMSuite, we believe in complete transparency about how we handle your data. 
-        As a self-hostable, open-source CRM, your privacy and data ownership are fundamental rights.
+        As a self-hostable CRM solution, your privacy and data ownership are fundamental rights.
       </p>
       
       <div class="mt-8 flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 text-blue-100">
@@ -149,7 +149,7 @@
           <Eye class="h-6 w-6 text-blue-600" />
         </div>
         <h3 class="text-lg font-bold text-gray-900 mb-2">Transparency</h3>
-        <p class="text-gray-600 text-sm">Open-source code means you can inspect exactly how your data is handled and stored.</p>
+        <p class="text-gray-600 text-sm">Transparent architecture means you can inspect exactly how your data is handled and stored.</p>
       </div>
     </div>
   </div>
@@ -335,63 +335,18 @@
         </p>
       </div>
 
-      <!-- Contact & Updates -->
-      <div class="mb-12">
-        <h2 class="text-3xl font-bold text-gray-900 mb-6">Contact Information & Policy Updates</h2>
-        
-        <div class="bg-blue-50 p-6 rounded-xl">
-          <h4 class="font-semibold text-blue-900 mb-3">Questions About This Policy?</h4>
-          <p class="text-blue-800 mb-4">
-            If you have any questions about this Privacy Policy or how we handle your data, please contact us:
-          </p>
-          <ul class="space-y-2 text-blue-800">
-            <li class="flex items-center">
-              <Mail class="w-5 h-5 mr-2" />
-              <a href="mailto:privacy@bottlecrm.io" class="hover:underline">privacy@bottlecrm.io</a>
-            </li>
-            <li class="flex items-center">
-              <Globe class="w-5 h-5 mr-2" />
-              <a href="/contact" class="hover:underline">Contact Form</a>
-            </li>
-          </ul>
-        </div>
 
-        <div class="mt-6 p-6 bg-gray-50 rounded-xl">
-          <h4 class="font-semibold text-gray-900 mb-3">Policy Updates</h4>
-          <p class="text-gray-700">
-            We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. 
-            When we make significant changes, we will notify users through our website and GitHub repository. 
-            The "Last Updated" date at the top of this policy indicates when the most recent changes were made.
-          </p>
-        </div>
-      </div>
 
-      <!-- Open Source Transparency -->
+      <!-- Architecture Transparency -->
       <div class="mb-12">
-        <h2 class="text-3xl font-bold text-gray-900 mb-6">Open Source Transparency</h2>
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Architecture Transparency</h2>
         
         <div class="bg-green-50 border border-green-200 p-6 rounded-xl">
-          <p class="text-green-800 mb-4">
-            <strong>Complete Transparency:</strong> As an open-source project, you can inspect our entire codebase 
+          <p class="text-green-800">
+            <strong>Complete Transparency:</strong> As a transparent project, you can inspect our entire codebase 
             to verify how data is handled, stored, and processed. This level of transparency is impossible with 
             proprietary CRM solutions.
           </p>
-          <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
-            <a href="https://github.com/MicroPyramid/opensource-startup-crm" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               class="inline-flex items-center text-green-700 hover:text-green-800 font-medium">
-              <FileText class="w-5 h-5 mr-2" />
-              View Source Code
-            </a>
-            <a href="https://github.com/MicroPyramid/opensource-startup-crm/blob/main/SECURITY.md" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               class="inline-flex items-center text-green-700 hover:text-green-800 font-medium">
-              <Shield class="w-5 h-5 mr-2" />
-              Security Guidelines
-            </a>
-          </div>
         </div>
       </div>
 
