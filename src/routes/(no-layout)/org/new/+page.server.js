@@ -74,7 +74,8 @@ export const actions = {
       cookies.set('org', result.newOrg.id, {
         path: '/',
         httpOnly: true,
-        sameSite: 'strict'
+        sameSite: 'lax',
+        secure: false
       });
 
       // Redirect to home page after successful creation

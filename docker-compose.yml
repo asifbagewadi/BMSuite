@@ -1,0 +1,46 @@
+services:
+  bms-db:
+    image: postgres:16-alpine
+    container_name: bms-db
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-bms_admin}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-bms_secure_pass}
+      POSTGRES_DB: ${POSTGRES_DB:-bms_db}
+    volumes:
+      - bms_db_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER:-bms_admin} -d $${POSTGRES_DB:-bms_db}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    restart: always
+    networks:
+      - bms-network
+
+
+  bms-app:
+    build: .
+    container_name: bms-app
+    depends_on:
+      bms-db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-bms_admin}:${POSTGRES_PASSWORD:-bms_secure_pass}@bms-db:5432/${POSTGRES_DB:-bms_db}?schema=public
+      PORT: 3000
+      HOST: 0.0.0.0
+      # Add other environment variables here as needed
+    ports:
+      - "3000:3000"
+    restart: always
+    networks:
+      - bms-network
+
+
+networks:
+  bms-network:
+    driver: bridge
+
+volumes:
+  bms_db_data:

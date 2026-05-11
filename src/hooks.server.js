@@ -48,8 +48,8 @@ export async function handle({ event, resolve }) {
       } else {
         // User doesn't have access to this organization or orgId is stale.
         // Clear the invalid org cookies.
-        event.cookies.delete('org', { path: '/' });
-        event.cookies.delete('org_name', { path: '/' });
+        event.cookies.delete('org', { path: '/', secure: false });
+        event.cookies.delete('org_name', { path: '/', secure: false });
         // Redirect to the organization selection page.
         // The user is still authenticated.
         throw redirect(307, '/org');
