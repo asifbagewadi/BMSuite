@@ -1,6 +1,6 @@
 services:
   bms-db:
-    image: postgres:16-alpine
+    image: public.ecr.aws/docker/library/postgres:16-alpine
     container_name: bms-db
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-bms_admin}
