@@ -19,6 +19,16 @@ if ($LASTEXITCODE -ne 0) {
     exit
 }
 
+# 2b. Port Guard (Verify Port Availability)
+Write-Host "[CHECK] Verifying port availability..." -ForegroundColor Gray
+$ports = @(3000, 5432)
+foreach ($port in $ports) {
+    if (Get-NetTCPConnection -LocalPort $port -State Listen -ErrorAction SilentlyContinue) {
+        Write-Host "[WARNING] Port $port is already in use by another program." -ForegroundColor Yellow
+        Write-Host "If the system fails to start, please close the application using this port." -ForegroundColor Gray
+    }
+}
+
 # 3. Initialize Services
 Write-Host "`n[1/4] Optimizing environment and starting services..." -ForegroundColor Yellow
 docker compose build

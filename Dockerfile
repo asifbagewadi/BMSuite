@@ -28,6 +28,7 @@ COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/static ./static
 
 COPY scripts/entrypoint.sh /usr/local/bin/entrypoint.sh
+RUN sed -i 's/\r$//' /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
 EXPOSE 3000
