@@ -111,11 +111,17 @@ export const actions = {
         // Find user by email or create them if they do not exist
         let foundUser = await prisma.user.findUnique({ where: { email } });
         if (!foundUser) {
+            // Set a default temporary password for new users
+            const bcrypt = await import('bcrypt');
+            const defaultPassword = 'Welcome@123';
+            const hashedPassword = await bcrypt.hash(defaultPassword, 10);
+            
             foundUser = await prisma.user.create({
                 data: {
                     email,
                     user_id: crypto.randomUUID(),
-                    name: email.split('@')[0] // Generic fallback name
+                    name: email.split('@')[0], // Generic fallback name
+                    password: hashedPassword
                 }
             });
         }
@@ -226,5 +232,45 @@ export const actions = {
             where: { userId_organizationId: { userId: user_id, organizationId: org_id } }
         });
         return { success: true, message: 'User removed from organization successfully' };
+    },
+    reset_password: async ({ request, locals }) => {
+        const org_id = locals.org.id;
+        const user = locals.user;
+
+        // Only ADMIN can reset passwords
+        const userOrg = await prisma.userOrganization.findFirst({
+            where: {
+                userId: user.id,
+                organizationId: org_id,
+                role: 'ADMIN'
+            }
+        });
+        if (!userOrg) return fail(403, { error: 'Forbidden' });
+
+        const formData = await request.formData();
+        const user_id = formData.get('user_id')?.toString();
+        const password = formData.get('password')?.toString();
+
+        if (!user_id || !password) return fail(400, { error: 'User and password are required' });
+        
+        // Prevent self-reset via this administrative action
+        if (user_id === user.id) return fail(400, { error: 'Please use your Profile page to change your own password' });
+
+        if (password.length < 6) return fail(400, { error: 'Password must be at least 6 characters' });
+
+        try {
+            const bcrypt = await import('bcrypt');
+            const hashedPassword = await bcrypt.hash(password, 10);
+
+            await prisma.user.update({
+                where: { id: user_id },
+                data: { password: hashedPassword }
+            });
+
+            return { success: true, message: 'Password reset successfully' };
+        } catch (err) {
+            console.error('Reset password error:', err);
+            return fail(500, { error: 'Failed to reset password' });
+        }
     }
 };

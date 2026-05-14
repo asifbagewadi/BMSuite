@@ -11,7 +11,8 @@
 		Plus,
 		Check,
 		X,
-		Trash2
+		Trash2,
+		Key
 	} from '@lucide/svelte';
 	import { fade, slide } from 'svelte/transition';
 
@@ -95,11 +96,35 @@
 	function cancelDelete() {
 		userToDelete = null;
 	}
+	// Reset password modal state
+	/** @type {{ id: string, name: string } | null} */
+	let userToReset = $state(null);
+
+	function cancelReset() {
+		userToReset = null;
+	}
 </script>
 
 <div class="min-h-screen bg-gray-50 dark:bg-gray-900 py-8">
 	<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-		<!-- Header with Logout -->
+		{#if data.error}
+			<div class="flex flex-col items-center justify-center py-20 text-center">
+				<div class="mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/30">
+					<Shield class="h-10 w-10 text-red-600 dark:text-red-400" />
+				</div>
+				<h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Access Restricted</h2>
+				<p class="max-w-md text-gray-600 dark:text-gray-400 mb-8">
+					{data.error.name || 'You do not have administrative permissions to view this page.'}
+				</p>
+				<a 
+					href="/app" 
+					class="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 transition-all"
+				>
+					Return to Dashboard
+				</a>
+			</div>
+		{:else}
+			<!-- Header with Logout -->
 		<div class="mb-8 flex items-center justify-between">
 			<div>
 				<h1 class="text-3xl font-bold text-gray-900 dark:text-white">Organization Settings</h1>
@@ -420,18 +445,31 @@
 											{user.joined}
 										</td>
 										<td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-											{#if user.isSelf}
-												<span class="text-gray-300 dark:text-gray-600 cursor-not-allowed">—</span>
-											{:else}
-												<button 
-													type="button"
-													onclick={() => confirmDelete({ id: user.id, name: user.name })}
-													class="rounded-lg p-2 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 hover:text-red-700 dark:hover:text-red-300"
-													title="Remove user"
-												>
-													<Trash2 class="h-4 w-4" />
-												</button>
-											{/if}
+											<div class="flex items-center justify-end gap-2">
+												{#if !user.isSelf}
+													<button 
+														type="button"
+														onclick={() => userToReset = { id: user.id, name: user.name }}
+														class="rounded-lg p-2 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 hover:text-blue-700 dark:hover:text-blue-300"
+														title="Reset password"
+													>
+														<Key class="h-4 w-4" />
+													</button>
+												{/if}
+												
+												{#if user.isSelf}
+													<span class="text-gray-300 dark:text-gray-600 cursor-not-allowed px-2">—</span>
+												{:else}
+													<button 
+														type="button"
+														onclick={() => confirmDelete({ id: user.id, name: user.name })}
+														class="rounded-lg p-2 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 hover:text-red-700 dark:hover:text-red-300"
+														title="Remove user"
+													>
+														<Trash2 class="h-4 w-4" />
+													</button>
+												{/if}
+											</div>
 										</td>
 									</tr>
 								{/each}
@@ -441,8 +479,90 @@
 				</div>
 			</div>
 		</div>
+		{/if}
 	</div>
 </div>
+
+<!-- Reset Password Modal -->
+{#if userToReset}
+	<div
+		transition:fade={{ duration: 150 }}
+		class="fixed inset-0 z-50 flex items-center justify-center p-4"
+		role="dialog"
+		aria-modal="true"
+		aria-labelledby="reset-modal-title"
+	>
+		<!-- Backdrop -->
+		<div
+			class="absolute inset-0 bg-black/50 dark:bg-black/70"
+			onclick={cancelReset}
+			aria-hidden="true"
+		></div>
+
+		<!-- Modal panel -->
+		<div
+			transition:slide={{ duration: 200 }}
+			class="relative z-10 w-full max-w-sm rounded-2xl bg-white dark:bg-gray-800 shadow-xl ring-1 ring-gray-200 dark:ring-gray-700 p-6"
+		>
+			<!-- Icon -->
+			<div class="flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900/30 mx-auto mb-4">
+				<Key class="h-6 w-6 text-blue-600 dark:text-blue-400" />
+			</div>
+
+			<h3 id="reset-modal-title" class="text-center text-lg font-semibold text-gray-900 dark:text-white mb-2">
+				Reset Password
+			</h3>
+			<p class="text-center text-sm text-gray-500 dark:text-gray-400 mb-6">
+				Set a new password for <span class="font-medium text-gray-700 dark:text-gray-300">{userToReset.name}</span>.
+			</p>
+
+			<form
+				method="POST"
+				action="?/reset_password"
+				use:enhance={() => {
+					return async ({ update }) => {
+						userToReset = null;
+						await update();
+					};
+				}}
+				class="space-y-4"
+			>
+				<input type="hidden" name="user_id" value={userToReset?.id} />
+				
+				<div>
+					<label for="new-password" class="block text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase mb-1">
+						New Password
+					</label>
+					<input 
+						id="new-password"
+						name="password"
+						type="password"
+						required
+						minlength="6"
+						class="block w-full rounded-xl border-0 bg-gray-50 dark:bg-gray-700 py-3 px-4 text-gray-900 dark:text-white shadow-sm ring-1 ring-inset ring-gray-200 dark:ring-gray-600 focus:ring-2 focus:ring-inset focus:ring-blue-600 transition-all text-sm"
+						placeholder="••••••••"
+					/>
+				</div>
+
+				<div class="flex gap-3 pt-2">
+					<button
+						type="button"
+						onclick={cancelReset}
+						class="flex-1 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 px-4 py-2.5 text-sm font-semibold text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors"
+					>
+						Cancel
+					</button>
+					<button
+						type="submit"
+						class="flex-1 rounded-xl bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-colors shadow-sm"
+					>
+						Reset
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+{/if}
 
 <!-- Delete Confirmation Modal -->
 {#if userToDelete}

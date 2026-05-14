@@ -117,10 +117,6 @@
         </ul>
         
         <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-          <a href="/login" class="inline-flex items-center justify-center px-6 py-4 border border-transparent text-base font-semibold rounded-lg text-blue-700 bg-white hover:bg-gray-100 shadow-lg transition-all duration-200 hover:scale-105 whitespace-nowrap">
-            <Zap class="w-5 h-5 mr-2" />
-            Start Demo
-          </a>
         </div>
       </div>
     </div>

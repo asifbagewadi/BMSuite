@@ -104,5 +104,58 @@ export const actions = {
                 data: { name, phone }
             });
         }
+    },
+    changePassword: async ({ request, locals }) => {
+        if (!locals.user) {
+            throw redirect(307, '/login');
+        }
+
+        const formData = await request.formData();
+        const currentPassword = formData.get('currentPassword')?.toString();
+        const newPassword = formData.get('newPassword')?.toString();
+        const confirmPassword = formData.get('confirmPassword')?.toString();
+
+        if (!currentPassword || !newPassword || !confirmPassword) {
+            return fail(400, { error: 'All password fields are required' });
+        }
+
+        if (newPassword !== confirmPassword) {
+            return fail(400, { error: 'New passwords do not match' });
+        }
+
+        if (newPassword.length < 6) {
+            return fail(400, { error: 'New password must be at least 6 characters' });
+        }
+
+        try {
+            const user = await prisma.user.findUnique({
+                where: { id: locals.user.id }
+            });
+
+            if (!user || !user.password) {
+                return fail(400, { error: 'User not found or password not set' });
+            }
+
+            const bcrypt = await import('bcrypt');
+            const valid = await bcrypt.compare(currentPassword, user.password);
+
+            if (!valid) {
+                return fail(400, { error: 'Current password is incorrect' });
+            }
+
+            const hashedPassword = await bcrypt.hash(newPassword, 10);
+            await prisma.user.update({
+                where: { id: locals.user.id },
+                data: { password: hashedPassword }
+            });
+
+            return {
+                success: true,
+                message: 'Password changed successfully'
+            };
+        } catch (error) {
+            console.error('Error changing password:', error);
+            return fail(500, { error: 'Failed to change password. Please try again.' });
+        }
     }
 };

@@ -70,13 +70,17 @@ export const actions = {
         return { newOrg, userOrg };
       });
 
-      // Set org cookie for the newly created org
-      cookies.set('org', result.newOrg.id, {
+      // Set org cookies for the newly created org
+      const cookieOptions = {
         path: '/',
-        httpOnly: true,
+        httpOnly: false, // Match selection page
+        secure: false,   // Support LAN
         sameSite: 'lax',
-        secure: false
-      });
+        maxAge: 60 * 60 * 24 * 30 // 30 days
+      };
+
+      cookies.set('org', result.newOrg.id, cookieOptions);
+      cookies.set('org_name', orgName, cookieOptions);
 
       // Redirect to home page after successful creation
       return {

@@ -15,6 +15,32 @@ export async function handle({ event, resolve }) {
 	}
 	  
 	if (user) {
+	  // --- Inactivity Timeout Logic ---
+	  const lastActive = event.cookies.get('lastActive');
+	  const now = Date.now();
+	  const timeoutMs = 5 * 60 * 1000; // 5 minutes
+
+	  if (lastActive && (now - parseInt(lastActive)) > timeoutMs) {
+		// Session expired due to inactivity
+		event.cookies.delete('session', { path: '/', secure: false });
+		event.cookies.delete('org', { path: '/', secure: false });
+		event.cookies.delete('org_name', { path: '/', secure: false });
+		event.cookies.delete('lastActive', { path: '/', secure: false });
+		
+		// Redirect with a reason
+		throw redirect(307, '/login?reason=inactivity');
+	  }
+
+	  // Update activity timestamp on every valid request
+	  event.cookies.set('lastActive', now.toString(), {
+		path: '/',
+		secure: false,
+		httpOnly: false, // Accessible by client-side heartbeat
+		sameSite: 'lax',
+		maxAge: 60 * 60 * 24 // 24 hours
+	  });
+	  // --------------------------------
+
 	  event.locals.user = user
 	  
 	  // Check if org cookie is set
@@ -34,6 +60,7 @@ export async function handle({ event, resolve }) {
       if (userOrg) {
         // User has access to this organization, set it in locals
         event.locals.org = userOrg.organization;
+        event.locals.user.role = userOrg.role; // Attach the role to the user object
         // Also set org_name from cookie if available
         const orgName = event.cookies.get('org_name');
         if (orgName) {

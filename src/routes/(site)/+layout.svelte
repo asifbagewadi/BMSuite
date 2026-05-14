@@ -65,7 +65,7 @@
         <div class="flex items-center flex-shrink-0">
           <a href="/" class="flex items-center group" aria-label="BMSuite Homepage">
             <div class="relative">
-              <img src={logo} alt="BMSuite Logo" class="h-7 w-7 sm:h-8 sm:w-8 group-hover:opacity-90 transition-opacity duration-200" />
+              <img src={logo} alt="BMSuite Logo" class="h-9 w-9 sm:h-12 sm:w-12 group-hover:opacity-90 transition-opacity duration-200" />
               <div class="absolute -top-1 -right-1 w-2.5 h-2.5 bg-green-500 rounded-full animate-pulse"></div>
             </div>
             <span class="ml-2 text-lg sm:text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-200">BMSuite</span>
@@ -74,9 +74,6 @@
 
         <!-- Desktop nav — Login + Get Started only -->
         <div class="hidden sm:flex items-center space-x-3">
-          <a href="/login" class="px-4 py-2 rounded-lg text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-200">
-            Login
-          </a>
           <a href="/login" class="inline-flex items-center px-5 py-2.5 rounded-lg text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200">
             Get Started
             <ArrowRight class="ml-2 w-4 h-4" />
@@ -105,9 +102,6 @@
     {#if isMenuOpen}
       <div class="sm:hidden bg-white border-t border-gray-200 shadow-lg">
         <div class="px-4 pt-4 pb-6 space-y-3">
-          <a href="/login" class="block w-full text-center px-4 py-3 rounded-xl text-base font-medium text-gray-700 border border-gray-300 hover:bg-gray-50 transition-colors">
-            Login
-          </a>
           <a href="/login" class="block w-full text-center px-4 py-3 rounded-xl text-base font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 shadow-lg transition-all duration-200">
             Get Started
           </a>

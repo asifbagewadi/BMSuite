@@ -1,6 +1,6 @@
 <script>
     import { enhance } from '$app/forms';
-    import { User, Mail, Phone, Building, Calendar, Settings, Edit, Save, X } from '@lucide/svelte';
+    import { User, Mail, Phone, Building, Calendar, Settings, Edit, Save, X, Lock, ShieldCheck } from '@lucide/svelte';
     import { validatePhoneNumber, formatPhoneNumber } from '$lib/utils/phone.js';
     
     /** @type {{ data: import('./$types').PageData, form: import('./$types').ActionData }} */
@@ -318,6 +318,90 @@
                         </dl>
                     </div>
                 {/if}
+            </div>
+
+            <!-- Security / Password Section -->
+            <div class="mt-8 bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
+                <div class="p-6 border-b border-gray-200 dark:border-gray-700">
+                    <div class="flex items-center gap-3">
+                        <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-red-100 dark:bg-red-900/30">
+                            <Lock class="h-5 w-5 text-red-600 dark:text-red-400" />
+                        </div>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Security</h3>
+                    </div>
+                </div>
+                
+                <div class="p-6">
+                    <form method="POST" action="?/changePassword" use:enhance={handleSubmit} class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Current Password -->
+                            <div class="md:col-span-2">
+                                <label for="currentPassword" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                                    Current Password
+                                </label>
+                                <input
+                                    type="password"
+                                    id="currentPassword"
+                                    name="currentPassword"
+                                    required
+                                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:focus:ring-blue-400 dark:focus:border-blue-400 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                                    placeholder="••••••••"
+                                />
+                            </div>
+
+                            <!-- New Password -->
+                            <div>
+                                <label for="newPassword" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                                    New Password
+                                </label>
+                                <input
+                                    type="password"
+                                    id="newPassword"
+                                    name="newPassword"
+                                    required
+                                    minlength="6"
+                                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:focus:ring-blue-400 dark:focus:border-blue-400 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                                    placeholder="••••••••"
+                                />
+                            </div>
+
+                            <!-- Confirm Password -->
+                            <div>
+                                <label for="confirmPassword" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                                    Confirm New Password
+                                </label>
+                                <input
+                                    type="password"
+                                    id="confirmPassword"
+                                    name="confirmPassword"
+                                    required
+                                    minlength="6"
+                                    class="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:focus:ring-blue-400 dark:focus:border-blue-400 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                                    placeholder="••••••••"
+                                />
+                            </div>
+                        </div>
+
+                        <div class="flex justify-end">
+                            <button
+                                type="submit"
+                                disabled={isSubmitting}
+                                class="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-red-600 border border-transparent rounded-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 dark:focus:ring-offset-gray-800 transition-colors disabled:opacity-50"
+                            >
+                                {#if isSubmitting}
+                                    <svg class="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
+                                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                    </svg>
+                                    Updating Password...
+                                {:else}
+                                    <ShieldCheck class="w-4 h-4" />
+                                    Update Password
+                                {/if}
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
             
             <!-- Organizations -->

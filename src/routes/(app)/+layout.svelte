@@ -1,9 +1,42 @@
 <script>
 	import '../../app.css'
+	import { onMount } from 'svelte';
+	import { browser } from '$app/environment';
 	import Sidebar from './Sidebar.svelte';
 	let { data, children } = $props();
 
 	let drawerHidden = $state(true);
+
+	onMount(() => {
+		if (browser) {
+			let timeout;
+			const inactivityTime = 5 * 60 * 1000; // 5 minutes in milliseconds
+
+			const resetTimer = () => {
+				clearTimeout(timeout);
+				timeout = setTimeout(() => {
+					// Redirect to current page which will trigger the server-side inactivity check
+					window.location.reload();
+				}, inactivityTime);
+			};
+
+			// Add event listeners for various user interactions
+			const events = ['mousedown', 'mousemove', 'keypress', 'scroll', 'touchstart'];
+			events.forEach(name => {
+				document.addEventListener(name, resetTimer, true);
+			});
+
+			resetTimer(); // Initialize timer
+
+			return () => {
+				// Cleanup
+				events.forEach(name => {
+					document.removeEventListener(name, resetTimer, true);
+				});
+				clearTimeout(timeout);
+			};
+		}
+	});
 </script>
 
 <!-- Mobile menu button for when sidebar is hidden -->

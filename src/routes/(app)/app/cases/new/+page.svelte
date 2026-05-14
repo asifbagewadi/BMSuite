@@ -11,8 +11,8 @@
   let errorMsg = '';
 </script>
 
-<div class="h-screen bg-gray-50/50 dark:bg-gray-900/50 overflow-hidden">
-  <div class="container mx-auto px-4 py-4 max-w-2xl h-full">
+<div class="min-h-full bg-gray-50/50 dark:bg-gray-900/50">
+  <div class="container mx-auto px-4 py-4 max-w-2xl">
     <!-- Header -->
     <div class="mb-4">
       <div class="flex items-center gap-3 mb-1">

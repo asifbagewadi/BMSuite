@@ -2,7 +2,9 @@
   import '../../../app.css';
   import { enhance } from '$app/forms';
   import { onMount } from 'svelte';
-  import { Mail, Lock, ArrowRight, Github } from '@lucide/svelte';
+  import { page } from '$app/stores';
+  import { Mail, Lock, ArrowRight, Github, Info, AlertCircle } from '@lucide/svelte';
+  import { slide } from 'svelte/transition';
   
   export let data;
   export let form;
@@ -10,8 +12,14 @@
   let formElement;
   let googleCredential = '';
   let isLoading = false;
+  let inactivityMsg = false;
 
   onMount(() => {
+    // Check for inactivity reason in URL
+    if ($page.url.searchParams.get('reason') === 'inactivity') {
+      inactivityMsg = true;
+    }
+
     // Expose callback globally for Google Identity Services
     window.handleCredentialResponse = (response) => {
       googleCredential = response.credential;
@@ -40,10 +48,8 @@
       
       <div class="relative z-10">
         <div class="flex items-center gap-3 mb-16">
-          <div class="w-12 h-12 bg-white/20 backdrop-blur-xl border border-white/30 rounded-2xl flex items-center justify-center shadow-lg transform -rotate-3">
-             <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-             </svg>
+          <div class="w-20 h-20 bg-white/20 backdrop-blur-xl border border-white/30 rounded-[2rem] flex items-center justify-center shadow-lg overflow-hidden p-2 transform -rotate-3 hover:rotate-0 transition-all duration-300">
+             <img src="/logo.png" alt="BMSuite Logo" class="w-full h-full object-contain" />
           </div>
           <span class="text-3xl font-black tracking-tighter uppercase italic">BMSuite</span>
         </div>
@@ -82,27 +88,41 @@
       <div class="max-w-md mx-auto w-full">
         <!-- Mobile Logo (Visible only on mobile) -->
         <div class="md:hidden flex items-center gap-2 mb-10">
-           <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-             <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-             </svg>
+           <div class="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center overflow-hidden p-1.5 shadow-md">
+             <img src="/logo.png" alt="BMSuite Logo" class="w-full h-full object-contain" />
            </div>
            <span class="text-xl font-bold tracking-tighter text-gray-900 dark:text-white uppercase italic">BMSuite</span>
         </div>
 
         <div class="mb-10">
-          <h2 class="text-4xl font-black text-gray-900 dark:text-white mb-2 tracking-tight">Welcome back</h2>
+          <h2 class="text-4xl font-black text-gray-900 dark:text-white mb-2 tracking-tight">Welcome</h2>
           <p class="text-gray-500 dark:text-gray-400 text-lg">Enter your details to access your account.</p>
         </div>
 
-        {#if form?.error}
-          <div class="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 text-red-600 dark:text-red-400 p-4 rounded-2xl mb-6 text-sm font-medium flex items-center gap-3 animate-shake">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-            {form.error}
-          </div>
-        {/if}
+        <!-- Alerts Section -->
+        <div class="mb-8 space-y-4">
+          {#if inactivityMsg}
+            <div 
+              transition:slide={{ duration: 300 }}
+              class="flex items-center gap-3 p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-2xl text-amber-800 dark:text-amber-300"
+            >
+              <Info class="w-5 h-5 flex-shrink-0" />
+              <div class="text-sm font-semibold">
+                Session expired due to inactivity. Please log in again.
+              </div>
+            </div>
+          {/if}
+
+          {#if form?.error}
+            <div 
+              transition:slide={{ duration: 300 }}
+              class="flex items-center gap-3 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-2xl text-red-800 dark:text-red-300"
+            >
+              <AlertCircle class="w-5 h-5 flex-shrink-0" />
+              <div class="text-sm font-semibold">{form.error}</div>
+            </div>
+          {/if}
+        </div>
 
         <!-- ✅ Email Login Form -->
         <form method="POST" action="?/emailLogin" use:enhance={() => { isLoading = true; return async ({ update }) => { isLoading = false; await update(); }; }} class="space-y-6">
@@ -127,9 +147,6 @@
           <div class="space-y-2">
             <div class="flex justify-between items-center px-1">
               <label for="password" class="text-sm font-bold text-gray-700 dark:text-gray-300">Password</label>
-              <!-- Forgot password temporarily disabled
-              <a href="/forgot-password" class="text-xs font-bold text-blue-600 hover:text-blue-700 dark:text-blue-400 transition-colors">Forgot password?</a>
-              -->
             </div>
             <div class="relative group">
               <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-400 group-focus-within:text-blue-500 transition-colors">
@@ -168,38 +185,6 @@
         <!-- <form bind:this={formElement} method="POST" action="?/googleLogin" class="hidden">
           <input type="hidden" name="credential" bind:value={googleCredential} />
         </form> -->
-
-        <!-- Google login temporarily disabled
-        <div class="mt-8">
-          {#if data.googleClientId}
-            <div id="g_id_onload"
-                 data-client_id="{data.googleClientId}"
-                 data-context="signin"
-                 data-ux_mode="popup"
-                 data-callback="handleCredentialResponse"
-                 data-auto_prompt="false">
-            </div>
-
-            <div class="g_id_signin w-full flex justify-center"
-                 data-type="standard"
-                 data-shape="rectangular"
-                 data-theme="outline"
-                 data-text="continue_with"
-                 data-size="large"
-                 data-width="100%"
-                 data-logo_alignment="center"
-                 style="border-radius: 1rem !important; overflow: hidden !important;">
-            </div>
-          {:else}
-            <div class="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-2xl flex items-center gap-3">
-              <div class="text-blue-500">
-                <Github size={20} />
-              </div>
-              <p class="text-xs text-blue-700 dark:text-blue-300 font-medium italic leading-tight">Corporate Single Sign-On is currently unavailable. Please use your email to continue.</p>
-            </div>
-          {/if}
-        </div>
-        -->
       </div>
     </div>
   </div>

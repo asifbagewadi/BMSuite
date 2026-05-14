@@ -197,7 +197,7 @@
 		<!-- Header section with logo and mobile close button -->
 		<div class="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
 			<a href="/app" class="flex items-center gap-3">
-				<img src={imgLogo} class="h-8 w-auto" alt="BMSuite Logo" />
+				<img src={imgLogo} class="h-12 w-auto" alt="BMSuite Logo" />
 				<span class="text-xl font-bold text-gray-900 dark:text-white tracking-tight">
 					{org_name}
 				</span>
@@ -267,6 +267,53 @@
 
 		<!-- settings section -->
 		<div class="p-4 border-t border-gray-200 dark:border-gray-700" bind:this={dropdownRef}>
+			<!-- settings dropdown menu -->
+			{#if userDropdownOpen}
+				<div 
+					class="mb-3 p-1 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm"
+					onclick={handleDropdownClick}
+					onkeydown={(e) => { if (e.key === 'Enter' || e.key === ' ') handleDropdownClick(e); }}
+					tabindex="0"
+					role="menu"
+				>
+					<button
+						type="button"
+						onclick={(e) => handleSettingsLinkClick(e, '/app/profile')}
+						class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 hover:bg-white dark:text-gray-300 dark:hover:bg-gray-700 rounded transition-colors w-full text-left"
+					>
+						<User class="w-4 h-4" />
+						Profile
+					</button>
+					{#if user.role === 'ADMIN'}
+						<button
+							type="button"
+							onclick={(e) => handleSettingsLinkClick(e, '/app/users')}
+							class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 hover:bg-white dark:text-gray-300 dark:hover:bg-gray-700 rounded transition-colors w-full text-left"
+						>
+							<Users class="w-4 h-4" />
+							Users
+						</button>
+						<button
+							type="button"
+							onclick={(e) => handleSettingsLinkClick(e, '/org')}
+							class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 hover:bg-white dark:text-gray-300 dark:hover:bg-gray-700 rounded transition-colors w-full text-left"
+						>
+							<Building class="w-4 h-4" />
+							Organizations
+						</button>
+					{/if}
+					<hr class="my-1 border-gray-200 dark:border-gray-600" />
+					<button
+						type="button"
+						onclick={(e) => handleSettingsLinkClick(e, '/logout')}
+						class="flex items-center gap-3 px-3 py-2 text-sm text-red-600 hover:bg-red-50 dark:text-red-400 dark:hover:bg-red-900/20 rounded transition-colors w-full text-left"
+					>
+						<LogOut class="w-4 h-4" />
+						Sign out
+					</button>
+				</div>
+			{/if}
+
 			<div class="flex items-center gap-3 mb-3">
 				{#if user.profilePhoto}
 					<img class="w-10 h-10 rounded-lg object-cover border border-gray-200 dark:border-gray-700" src={user.profilePhoto} alt="User avatar" />
@@ -303,51 +350,6 @@
 					<Settings class="w-4 h-4" />
 				</button>
 			</div>
-
-			<!-- settings dropdown menu -->
-			{#if userDropdownOpen}
-				<div 
-					class="mt-3 p-1 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700"
-					onclick={handleDropdownClick}
-					onkeydown={(e) => { if (e.key === 'Enter' || e.key === ' ') handleDropdownClick(e); }}
-					tabindex="0"
-					role="menu"
-				>
-					<button
-						type="button"
-						onclick={(e) => handleSettingsLinkClick(e, '/app/profile')}
-						class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 hover:bg-white dark:text-gray-300 dark:hover:bg-gray-700 rounded transition-colors w-full text-left"
-					>
-						<User class="w-4 h-4" />
-						Profile
-					</button>
-					<button
-						type="button"
-						onclick={(e) => handleSettingsLinkClick(e, '/app/users')}
-						class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 hover:bg-white dark:text-gray-300 dark:hover:bg-gray-700 rounded transition-colors w-full text-left"
-					>
-						<Users class="w-4 h-4" />
-						Users
-					</button>
-					<button
-						type="button"
-						onclick={(e) => handleSettingsLinkClick(e, '/org')}
-						class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 hover:bg-white dark:text-gray-300 dark:hover:bg-gray-700 rounded transition-colors w-full text-left"
-					>
-						<Building class="w-4 h-4" />
-						Organizations
-					</button>
-					<hr class="my-1 border-gray-200 dark:border-gray-600" />
-					<button
-						type="button"
-						onclick={(e) => handleSettingsLinkClick(e, '/logout')}
-						class="flex items-center gap-3 px-3 py-2 text-sm text-red-600 hover:bg-red-50 dark:text-red-400 dark:hover:bg-red-900/20 rounded transition-colors w-full text-left"
-					>
-						<LogOut class="w-4 h-4" />
-						Sign out
-					</button>
-				</div>
-			{/if}
 		</div>
 	</div>
 </aside>
