@@ -42,8 +42,7 @@ $IPv4 = (Get-NetIPAddress | Where-Object {
     $_.AddressFamily -eq 'IPv4' -and 
     $_.InterfaceAlias -notlike '*Loopback*' -and 
     $_.InterfaceAlias -notlike '*vEthernet*' -and
-    $_.IPAddress -notlike '169.*' -and
-    $_.IPAddress -notlike '172.*'
+    $_.IPAddress -notlike '169.*'
 }).IPAddress | Select-Object -First 1
 
 Write-Host "`n[3/4] System is now online!" -ForegroundColor Green
